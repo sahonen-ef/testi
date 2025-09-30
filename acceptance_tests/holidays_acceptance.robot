@@ -34,6 +34,54 @@ Future Year Holidays
     And User should see holiday name    New Year's Day
     [Teardown]    Close Browser
 
+Swedish Holidays in Swedish
+    [Tags]    smoke    swedish    sweden
+    Given User opens the application
+    When User enters year and language    2025    sv    se
+    Then User sees working day holidays for Swedish year    2025
+    And User should see holiday name    Långfredag
+    [Teardown]    Close Browser
+
+Swedish Holidays in English
+    [Tags]    regression    english    sweden
+    Given User opens the application
+    When User enters year and language    2025    en    se
+    Then User sees working day holidays for year    2025
+    And User should see holiday name    Swedish National Day
+    [Teardown]    Close Browser
+
+Norwegian Holidays in Norwegian
+    [Tags]    smoke    norwegian    norway
+    Given User opens the application
+    When User enters year and language    2027    no    no
+    Then User sees working day holidays for Norwegian year    2027
+    And User should see holiday name    Langfredag
+    [Teardown]    Close Browser
+
+Norwegian Holidays in English
+    [Tags]    regression    english    norway
+    Given User opens the application
+    When User enters year and language    2027    en    no
+    Then User sees working day holidays for year    2027
+    And User should see holiday name    Constitution Day
+    [Teardown]    Close Browser
+
+Estonian Holidays in Estonian
+    [Tags]    smoke    estonian    estonia
+    Given User opens the application
+    When User enters year and language    2025    et    ee
+    Then User sees working day holidays for Estonian year    2025
+    And User should see holiday name    Suur reede
+    [Teardown]    Close Browser
+
+Estonian Holidays in English
+    [Tags]    regression    english    estonia
+    Given User opens the application
+    When User enters year and language    2025    en    ee
+    Then User sees working day holidays for year    2025
+    And User should see holiday name    Independence Day
+    [Teardown]    Close Browser
+
 *** Keywords ***
 User opens the application
     New Browser    chromium
@@ -45,8 +93,9 @@ User enters year
     Press Keys    input[name="year"]    Enter
 
 User enters year and language
-    [Arguments]    ${year}    ${lang}
+    [Arguments]    ${year}    ${lang}    ${country}=fi
     Fill Text    input[name="year"]    ${year}
+    Select Options By    select[name="country"]    value    ${country}
     Select Options By    select[name="lang"]    value    ${lang}
     Click    button[type="submit"]
 
@@ -66,6 +115,21 @@ User sees working day holidays for Finnish year
     [Arguments]    ${year}
     ${body_text}=    Get Text    css=body
     Should Contain    ${body_text}    Vuonna ${year} on
+
+User sees working day holidays for Swedish year
+    [Arguments]    ${year}
+    ${body_text}=    Get Text    css=body
+    Should Contain    ${body_text}    År ${year} finns det
+
+User sees working day holidays for Norwegian year
+    [Arguments]    ${year}
+    ${body_text}=    Get Text    css=body
+    Should Contain    ${body_text}    I ${year} er det
+
+User sees working day holidays for Estonian year
+    [Arguments]    ${year}
+    ${body_text}=    Get Text    css=body
+    Should Contain    ${body_text}    Aastal ${year} on
 
 User should see holiday name
     [Arguments]    ${holiday_name}

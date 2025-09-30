@@ -2,6 +2,16 @@ from flask import Flask, render_template_string, request
 from holidays_finland_user_year import count_working_day_holidays
 
 WEEKDAYS_FI = ['maanantai', 'tiistai', 'keskiviikko', 'torstai', 'perjantai', 'lauantai', 'sunnuntai']
+WEEKDAYS_SV = ['måndag', 'tisdag', 'onsdag', 'torsdag', 'fredag', 'lördag', 'söndag']
+WEEKDAYS_NO = ['mandag', 'tirsdag', 'onsdag', 'torsdag', 'fredag', 'lørdag', 'søndag']
+WEEKDAYS_ET = ['esmaspäev', 'teisipäev', 'kolmapäev', 'neljapäev', 'reede', 'laupäev', 'pühapäev']
+
+COUNTRIES = {
+    'fi': {'en': 'Finland', 'fi': 'Suomi', 'sv': 'Finland', 'no': 'Finland', 'et': 'Soome'},
+    'se': {'en': 'Sweden', 'fi': 'Ruotsi', 'sv': 'Sverige', 'no': 'Sverige', 'et': 'Rootsi'},
+    'no': {'en': 'Norway', 'fi': 'Norja', 'sv': 'Norge', 'no': 'Norge', 'et': 'Norra'},
+    'ee': {'en': 'Estonia', 'fi': 'Viro', 'sv': 'Estland', 'no': 'Estland', 'et': 'Eesti'}
+}
 
 app = Flask(__name__)
 
@@ -91,16 +101,26 @@ HTML_TEMPLATE = '''
 </head>
 <body>
 <div class="container">
-    <h2>Finnish Midweek Holidays</h2>
+    <h2>{{ 'Midweek Holidays' if lang == 'en' else 'Arkipäivälle osuvat pyhät' if lang == 'fi' else 'Helgdagar på vardagar' if lang == 'sv' else 'Helligdager på hverdager' if lang == 'no' else 'Pühadepäevad tööpäevadel' }}</h2>
     <form method="post">
-        <label for="year">{{ 'Enter year (1900-2100):' if lang == 'en' else 'Anna vuosi (1900-2100):' }}</label>
+        <label for="year">{{ 'Enter year (1900-2100):' if lang == 'en' else 'Anna vuosi (1900-2100):' if lang == 'fi' else 'Ange år (1900-2100):' if lang == 'sv' else 'Angi år (1900-2100):' if lang == 'no' else 'Sisesta aasta (1900-2100):' }}</label>
         <input type="number" id="year" name="year" min="1900" max="2100" required value="{{ year }}">
-        <label for="lang" style="margin-left:1em;">{{ 'Language:' if lang == 'en' else 'Kieli:' }}</label>
+        <label for="country" style="margin-left:1em;">{{ 'Country:' if lang == 'en' else 'Maa:' if lang == 'fi' else 'Land:' if lang == 'sv' else 'Land:' if lang == 'no' else 'Riik:' }}</label>
+        <select id="country" name="country">
+            <option value="fi" {% if country == 'fi' %}selected{% endif %}>{{ countries['fi'][lang] }}</option>
+            <option value="se" {% if country == 'se' %}selected{% endif %}>{{ countries['se'][lang] }}</option>
+            <option value="no" {% if country == 'no' %}selected{% endif %}>{{ countries['no'][lang] }}</option>
+            <option value="ee" {% if country == 'ee' %}selected{% endif %}>{{ countries['ee'][lang] }}</option>
+        </select>
+        <label for="lang" style="margin-left:1em;">{{ 'Language:' if lang == 'en' else 'Kieli:' if lang == 'fi' else 'Språk:' if lang == 'sv' else 'Språk:' if lang == 'no' else 'Keel:' }}</label>
         <select id="lang" name="lang">
             <option value="en" {% if lang == 'en' %}selected{% endif %}>English</option>
             <option value="fi" {% if lang == 'fi' %}selected{% endif %}>Suomi</option>
+            <option value="sv" {% if lang == 'sv' %}selected{% endif %}>Svenska</option>
+            <option value="no" {% if lang == 'no' %}selected{% endif %}>Norsk</option>
+            <option value="et" {% if lang == 'et' %}selected{% endif %}>Eesti</option>
         </select>
-        <button type="submit">{{ 'Show Holidays' if lang == 'en' else 'Näytä pyhät' }}</button>
+        <button type="submit">{{ 'Show Holidays' if lang == 'en' else 'Näytä pyhät' if lang == 'fi' else 'Visa helgdagar' if lang == 'sv' else 'Vis helligdager' if lang == 'no' else 'Näita pühi' }}</button>
     </form>
     {% if error %}
         <div class="error">{{ error }}</div>
@@ -109,9 +129,15 @@ HTML_TEMPLATE = '''
     <div class="holidays">
         <h3>
             {% if lang == 'en' %}
-                In {{ year }}, there are {{ count }} public holidays in Finland that fall on a working day (Mon-Fri):
+                In {{ year }}, there are {{ count }} public holidays in {{ countries[country][lang] }} that fall on a working day (Mon-Fri):
+            {% elif lang == 'fi' %}
+                Vuonna {{ year }} on {{ count }} arkipäivälle (ma-pe) osuvaa pyhäpäivää maassa {{ countries[country][lang] }}:
+            {% elif lang == 'sv' %}
+                År {{ year }} finns det {{ count }} helgdagar i {{ countries[country][lang] }} som infaller på en vardag (mån-fre):
+            {% elif lang == 'no' %}
+                I {{ year }} er det {{ count }} helligdager i {{ countries[country][lang] }} som faller på en hverdag (man-fre):
             {% else %}
-                Vuonna {{ year }} on {{ count }} arkipäivälle (ma-pe) osuvaa pyhäpäivää Suomessa:
+                Aastal {{ year }} on {{ count }} püha {{ countries[country][lang] }} riigis, mis langevad tööpäevadele (E-R):
             {% endif %}
         </h3>
         <table>
@@ -128,8 +154,14 @@ HTML_TEMPLATE = '''
                     <td>
                         {% if lang == 'en' %}
                             {{ d.strftime('%A') }}
-                        {% else %}
+                        {% elif lang == 'fi' %}
                             {{ weekdays_fi[d.weekday()] }}
+                        {% elif lang == 'sv' %}
+                            {{ weekdays_sv[d.weekday()] }}
+                        {% elif lang == 'no' %}
+                            {{ weekdays_no[d.weekday()] }}
+                        {% else %}
+                            {{ weekdays_et[d.weekday()] }}
                         {% endif %}
                     </td>
                     <td>{{ d.strftime('%Y-%m-%d') }}</td>
@@ -152,17 +184,33 @@ def index():
     count = 0
     error = ''
     lang = 'en'
+    country = 'fi'
     if request.method == 'POST':
         year_input = request.form.get('year', '')
         lang = request.form.get('lang', 'en')
+        country = request.form.get('country', 'fi')
         try:
             year = int(year_input)
             if year < 1900 or year > 2100:
-                error = 'Please enter a valid year between 1900 and 2100.' if lang == 'en' else 'Anna vuosi väliltä 1900-2100.'
+                error_messages = {
+                    'en': 'Please enter a valid year between 1900 and 2100.',
+                    'fi': 'Anna vuosi väliltä 1900-2100.',
+                    'sv': 'Ange ett år mellan 1900 och 2100.',
+                    'no': 'Angi et år mellom 1900 og 2100.',
+                    'et': 'Sisestage aasta vahemikus 1900-2100.'
+                }
+                error = error_messages.get(lang, error_messages['en'])
             else:
-                count, holidays = count_working_day_holidays(year, lang=lang)
+                count, holidays = count_working_day_holidays(year, lang=lang, country=country)
         except ValueError:
-            error = 'Please enter a valid integer year.' if lang == 'en' else 'Anna kelvollinen vuosiluku.'
+            error_messages = {
+                'en': 'Please enter a valid integer year.',
+                'fi': 'Anna kelvollinen vuosiluku.',
+                'sv': 'Ange ett giltigt årtal.',
+                'no': 'Angi et gyldig årstall.',
+                'et': 'Sisestage kehtiv aastaarv.'
+            }
+            error = error_messages.get(lang, error_messages['en'])
     return render_template_string(
         HTML_TEMPLATE,
         year=year,
@@ -170,7 +218,12 @@ def index():
         count=count,
         error=error,
         lang=lang,
-        weekdays_fi=WEEKDAYS_FI
+        country=country,
+        countries=COUNTRIES,
+        weekdays_fi=WEEKDAYS_FI,
+        weekdays_sv=WEEKDAYS_SV,
+        weekdays_no=WEEKDAYS_NO,
+        weekdays_et=WEEKDAYS_ET
     )
 
 if __name__ == '__main__':
