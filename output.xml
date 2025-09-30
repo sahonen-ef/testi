@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.10.7 on win32)" generated="2025-09-30T08:11:40.733767" rpa="false" schemaversion="5">
+<suite id="s1" name="Holidays Acceptance" source="C:\Users\SariAhonen\Copilot\testi\acceptance_tests\holidays_acceptance.robot">
+<test id="s1-t1" name="Midweek Holidays in English" line="8">
+<kw name="Given user opens the holidays page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-30T08:11:40.939457" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<msg time="2025-09-30T08:11:46.617397" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-09-30T08:11:46.617397" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 140.0.7339.208 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x0x7ff613156f95+76917]
+	GetHandleVerifier [0x0x7ff613156ff0+77008]
+	(No symbol) [0x0x7ff612f09dea]
+	(No symbol) [0x0x7ff612f4e1df]
+	(No symbol) [0x0x7ff612f4d22b]
+	(No symbol) [0x0x7ff612f46e2a]
+	(No symbol) [0x0x7ff612f42675]
+	(No symbol) [0x0x7ff612f95e9e]
+	(No symbol) [0x0x7ff612f95630]
+	(No symbol) [0x0x7ff612f88243]
+	(No symbol) [0x0x7ff612f51431]
+	(No symbol) [0x0x7ff612f521c3]
+	GetHandleVerifier [0x0x7ff61342d2cd+3051437]
+	GetHandleVerifier [0x0x7ff613427923+3028483]
+	GetHandleVerifier [0x0x7ff6134458bd+3151261]
+	GetHandleVerifier [0x0x7ff61317185e+185662]
+	GetHandleVerifier [0x0x7ff61317971f+218111]
+	GetHandleVerifier [0x0x7ff61315fb14+112628]
+	GetHandleVerifier [0x0x7ff61315fcc9+113065]
+	GetHandleVerifier [0x0x7ff613146c98+10616]
+	BaseThreadInitThunk [0x0x7ffa085ce8d7+23]
+	RtlUserThreadStart [0x0x7ffa098c8d9c+44]
+</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-09-30T08:11:40.939457" elapsed="5.684131">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 140.0.7339.208 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x0x7ff613156f95+76917]
+	GetHandleVerifier [0x0x7ff613156ff0+77008]
+	(No symbol) [0x0x7ff612f09dea]
+	(No symbol) [0x0x7ff612f4e1df]
+	(No symbol) [0x0x7ff612f4d22b]
+	(No symbol) [0x0x7ff612f46e2a]
+	(No symbol) [0x0x7ff612f42675]
+	(No symbol) [0x0x7ff612f95e9e]
+	(No symbol) [0x0x7ff612f95630]
+	(No symbol) [0x0x7ff612f88243]
+	(No symbol) [0x0x7ff612f51431]
+	(No symbol) [0x0x7ff612f521c3]
+	GetHandleVerifier [0x0x7ff61342d2cd+3051437]
+	GetHandleVerifier [0x0x7ff613427923+3028483]
+	GetHandleVerifier [0x0x7ff6134458bd+3151261]
+	GetHandleVerifier [0x0x7ff61317185e+185662]
+	GetHandleVerifier [0x0x7ff61317971f+218111]
+	GetHandleVerifier [0x0x7ff61315fb14+112628]
+	GetHandleVerifier [0x0x7ff61315fcc9+113065]
+	GetHandleVerifier [0x0x7ff613146c98+10616]
+	BaseThreadInitThunk [0x0x7ffa085ce8d7+23]
+	RtlUserThreadStart [0x0x7ffa098c8d9c+44]
+</status>
+</kw>
+<status status="FAIL" start="2025-09-30T08:11:40.939457" elapsed="5.684131">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 140.0.7339.208 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x0x7ff613156f95+76917]
+	GetHandleVerifier [0x0x7ff613156ff0+77008]
+	(No symbol) [0x0x7ff612f09dea]
+	(No symbol) [0x0x7ff612f4e1df]
+	(No symbol) [0x0x7ff612f4d22b]
+	(No symbol) [0x0x7ff612f46e2a]
+	(No symbol) [0x0x7ff612f42675]
+	(No symbol) [0x0x7ff612f95e9e]
+	(No symbol) [0x0x7ff612f95630]
+	(No symbol) [0x0x7ff612f88243]
+	(No symbol) [0x0x7ff612f51431]
+	(No symbol) [0x0x7ff612f521c3]
+	GetHandleVerifier [0x0x7ff61342d2cd+3051437]
+	GetHandleVerifier [0x0x7ff613427923+3028483]
+	GetHandleVerifier [0x0x7ff6134458bd+3151261]
+	GetHandleVerifier [0x0x7ff61317185e+185662]
+	GetHandleVerifier [0x0x7ff61317971f+218111]
+	GetHandleVerifier [0x0x7ff61315fb14+112628]
+	GetHandleVerifier [0x0x7ff61315fcc9+113065]
+	GetHandleVerifier [0x0x7ff613146c98+10616]
+	BaseThreadInitThunk [0x0x7ffa085ce8d7+23]
+	RtlUserThreadStart [0x0x7ffa098c8d9c+44]
+</status>
+</kw>
+<kw name="When user enters year and language">
+<arg>2024</arg>
+<arg>en</arg>
+<status status="NOT RUN" start="2025-09-30T08:11:46.625178" elapsed="0.000000"/>
+</kw>
+<kw name="And user clicks show holidays">
+<status status="NOT RUN" start="2025-09-30T08:11:46.625178" elapsed="0.000000"/>
+</kw>
+<kw name="Then user should see holiday name">
+<arg>Good Friday</arg>
+<status status="NOT RUN" start="2025-09-30T08:11:46.625178" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-30T08:11:46.626201" elapsed="0.000000"/>
+</kw>
+<tag>english</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="FAIL" start="2025-09-30T08:11:40.938442" elapsed="5.687759">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 140.0.7339.208 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x0x7ff613156f95+76917]
+	GetHandleVerifier [0x0x7ff613156ff0+77008]
+	(No symbol) [0x0x7ff612f09dea]
+	(No symbol) [0x0x7ff612f4e1df]
+	(No symbol) [0x0x7ff612f4d22b]
+	(No symbol) [0x0x7ff612f46e2a]
+	(No symbol) [0x0x7ff612f42675]
+	(No symbol) [0x0x7ff612f95e9e]
+	(No symbol) [0x0x7ff612f95630]
+	(No symbol) [0x0x7ff612f88243]
+	(No symbol) [0x0x7ff612f51431]
+	(No symbol) [0x0x7ff612f521c3]
+	GetHandleVerifier [0x0x7ff61342d2cd+3051437]
+	GetHandleVerifier [0x0x7ff613427923+3028483]
+	GetHandleVerifier [0x0x7ff6134458bd+3151261]
+	GetHandleVerifier [0x0x7ff61317185e+185662]
+	GetHandleVerifier [0x0x7ff61317971f+218111]
+	GetHandleVerifier [0x0x7ff61315fb14+112628]
+	GetHandleVerifier [0x0x7ff61315fcc9+113065]
+	GetHandleVerifier [0x0x7ff613146c98+10616]
+	BaseThreadInitThunk [0x0x7ffa085ce8d7+23]
+	RtlUserThreadStart [0x0x7ffa098c8d9c+44]
+</status>
+</test>
+<test id="s1-t2" name="Midweek Holidays in Finnish" line="16">
+<kw name="Given user opens the holidays page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-30T08:11:46.627706" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<msg time="2025-09-30T08:11:50.777854" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-09-30T08:11:50.777854" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 140.0.7339.208 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x0x7ff613156f95+76917]
+	GetHandleVerifier [0x0x7ff613156ff0+77008]
+	(No symbol) [0x0x7ff612f09dea]
+	(No symbol) [0x0x7ff612f4e1df]
+	(No symbol) [0x0x7ff612f4d22b]
+	(No symbol) [0x0x7ff612f46e2a]
+	(No symbol) [0x0x7ff612f42675]
+	(No symbol) [0x0x7ff612f95e9e]
+	(No symbol) [0x0x7ff612f95630]
+	(No symbol) [0x0x7ff612f88243]
+	(No symbol) [0x0x7ff612f51431]
+	(No symbol) [0x0x7ff612f521c3]
+	GetHandleVerifier [0x0x7ff61342d2cd+3051437]
+	GetHandleVerifier [0x0x7ff613427923+3028483]
+	GetHandleVerifier [0x0x7ff6134458bd+3151261]
+	GetHandleVerifier [0x0x7ff61317185e+185662]
+	GetHandleVerifier [0x0x7ff61317971f+218111]
+	GetHandleVerifier [0x0x7ff61315fb14+112628]
+	GetHandleVerifier [0x0x7ff61315fcc9+113065]
+	GetHandleVerifier [0x0x7ff613146c98+10616]
+	BaseThreadInitThunk [0x0x7ffa085ce8d7+23]
+	RtlUserThreadStart [0x0x7ffa098c8d9c+44]
+</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-09-30T08:11:46.627706" elapsed="4.151155">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 140.0.7339.208 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x0x7ff613156f95+76917]
+	GetHandleVerifier [0x0x7ff613156ff0+77008]
+	(No symbol) [0x0x7ff612f09dea]
+	(No symbol) [0x0x7ff612f4e1df]
+	(No symbol) [0x0x7ff612f4d22b]
+	(No symbol) [0x0x7ff612f46e2a]
+	(No symbol) [0x0x7ff612f42675]
+	(No symbol) [0x0x7ff612f95e9e]
+	(No symbol) [0x0x7ff612f95630]
+	(No symbol) [0x0x7ff612f88243]
+	(No symbol) [0x0x7ff612f51431]
+	(No symbol) [0x0x7ff612f521c3]
+	GetHandleVerifier [0x0x7ff61342d2cd+3051437]
+	GetHandleVerifier [0x0x7ff613427923+3028483]
+	GetHandleVerifier [0x0x7ff6134458bd+3151261]
+	GetHandleVerifier [0x0x7ff61317185e+185662]
+	GetHandleVerifier [0x0x7ff61317971f+218111]
+	GetHandleVerifier [0x0x7ff61315fb14+112628]
+	GetHandleVerifier [0x0x7ff61315fcc9+113065]
+	GetHandleVerifier [0x0x7ff613146c98+10616]
+	BaseThreadInitThunk [0x0x7ffa085ce8d7+23]
+	RtlUserThreadStart [0x0x7ffa098c8d9c+44]
+</status>
+</kw>
+<status status="FAIL" start="2025-09-30T08:11:46.627706" elapsed="4.151155">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 140.0.7339.208 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x0x7ff613156f95+76917]
+	GetHandleVerifier [0x0x7ff613156ff0+77008]
+	(No symbol) [0x0x7ff612f09dea]
+	(No symbol) [0x0x7ff612f4e1df]
+	(No symbol) [0x0x7ff612f4d22b]
+	(No symbol) [0x0x7ff612f46e2a]
+	(No symbol) [0x0x7ff612f42675]
+	(No symbol) [0x0x7ff612f95e9e]
+	(No symbol) [0x0x7ff612f95630]
+	(No symbol) [0x0x7ff612f88243]
+	(No symbol) [0x0x7ff612f51431]
+	(No symbol) [0x0x7ff612f521c3]
+	GetHandleVerifier [0x0x7ff61342d2cd+3051437]
+	GetHandleVerifier [0x0x7ff613427923+3028483]
+	GetHandleVerifier [0x0x7ff6134458bd+3151261]
+	GetHandleVerifier [0x0x7ff61317185e+185662]
+	GetHandleVerifier [0x0x7ff61317971f+218111]
+	GetHandleVerifier [0x0x7ff61315fb14+112628]
+	GetHandleVerifier [0x0x7ff61315fcc9+113065]
+	GetHandleVerifier [0x0x7ff613146c98+10616]
+	BaseThreadInitThunk [0x0x7ffa085ce8d7+23]
+	RtlUserThreadStart [0x0x7ffa098c8d9c+44]
+</status>
+</kw>
+<kw name="When user enters year and language">
+<arg>2024</arg>
+<arg>fi</arg>
+<status status="NOT RUN" start="2025-09-30T08:11:50.779472" elapsed="0.000000"/>
+</kw>
+<kw name="And user clicks show holidays">
+<status status="NOT RUN" start="2025-09-30T08:11:50.779860" elapsed="0.000000"/>
+</kw>
+<kw name="Then user should see holiday name">
+<arg>Pitkäperjantai</arg>
+<status status="NOT RUN" start="2025-09-30T08:11:50.779860" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-30T08:11:50.779860" elapsed="0.000999"/>
+</kw>
+<tag>finnish</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<status status="FAIL" start="2025-09-30T08:11:46.626201" elapsed="4.154658">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 140.0.7339.208 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x0x7ff613156f95+76917]
+	GetHandleVerifier [0x0x7ff613156ff0+77008]
+	(No symbol) [0x0x7ff612f09dea]
+	(No symbol) [0x0x7ff612f4e1df]
+	(No symbol) [0x0x7ff612f4d22b]
+	(No symbol) [0x0x7ff612f46e2a]
+	(No symbol) [0x0x7ff612f42675]
+	(No symbol) [0x0x7ff612f95e9e]
+	(No symbol) [0x0x7ff612f95630]
+	(No symbol) [0x0x7ff612f88243]
+	(No symbol) [0x0x7ff612f51431]
+	(No symbol) [0x0x7ff612f521c3]
+	GetHandleVerifier [0x0x7ff61342d2cd+3051437]
+	GetHandleVerifier [0x0x7ff613427923+3028483]
+	GetHandleVerifier [0x0x7ff6134458bd+3151261]
+	GetHandleVerifier [0x0x7ff61317185e+185662]
+	GetHandleVerifier [0x0x7ff61317971f+218111]
+	GetHandleVerifier [0x0x7ff61315fb14+112628]
+	GetHandleVerifier [0x0x7ff61315fcc9+113065]
+	GetHandleVerifier [0x0x7ff613146c98+10616]
+	BaseThreadInitThunk [0x0x7ffa085ce8d7+23]
+	RtlUserThreadStart [0x0x7ffa098c8d9c+44]
+</status>
+</test>
+<status status="FAIL" start="2025-09-30T08:11:40.735135" elapsed="10.046812"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">english</stat>
+<stat pass="0" fail="1" skip="0">finnish</stat>
+<stat pass="0" fail="1" skip="0">regression</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+<stat pass="0" fail="2" skip="0">ui</stat>
+</tag>
+<suite>
+<stat name="Holidays Acceptance" id="s1" pass="0" fail="2" skip="0">Holidays Acceptance</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

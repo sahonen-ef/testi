@@ -51,30 +51,76 @@ def get_all_saints_day(year):
             return d
     return None
 
-def get_finnish_holidays(year):
-    holidays = set()
+
+
+HOLIDAY_NAMES_EN = {
+    (1, 1): "New Year's Day",
+    (1, 6): "Epiphany",
+    (5, 1): "May Day",
+    (12, 6): "Independence Day",
+    (12, 25): "Christmas Day",
+    (12, 26): "St. Stephen's Day",
+}
+
+HOLIDAY_NAMES_FI = {
+    (1, 1): "Uudenvuodenpäivä",
+    (1, 6): "Loppiainen",
+    (5, 1): "Vappu",
+    (12, 6): "Itsenäisyyspäivä",
+    (12, 25): "Joulupäivä",
+    (12, 26): "Tapaninpäivä",
+}
+
+def get_finnish_holidays(year, lang='en'):
+    holidays = []
+    if lang == 'fi':
+        names = HOLIDAY_NAMES_FI
+        movable = {
+            'Good Friday': 'Pitkäperjantai',
+            'Easter Monday': '2. pääsiäispäivä',
+            'Ascension Day': 'Helatorstai',
+            'Midsummer Eve': 'Juhannusaatto',
+            'Midsummer Day': 'Juhannuspäivä',
+            "All Saints' Day": 'Pyhäinpäivä',
+        }
+    else:
+        names = HOLIDAY_NAMES_EN
+        movable = {
+            'Good Friday': 'Good Friday',
+            'Easter Monday': 'Easter Monday',
+            'Ascension Day': 'Ascension Day',
+            'Midsummer Eve': 'Midsummer Eve',
+            'Midsummer Day': 'Midsummer Day',
+            "All Saints' Day": "All Saints' Day",
+        }
+    # Fixed holidays
     for m, d in FIXED_HOLIDAYS:
-        holidays.add(date(year, m, d))
+        holidays.append((date(year, m, d), names.get((m, d), "Holiday")))
+    # Movable holidays
     easter = get_easter(year)
-    holidays.add(easter - timedelta(days=2))   # Good Friday
-    holidays.add(easter + timedelta(days=1))   # Easter Monday
-    holidays.add(easter + timedelta(days=39))  # Ascension Day
+    holidays.append((easter - timedelta(days=2), movable['Good Friday']))
+    holidays.append((easter + timedelta(days=1), movable['Easter Monday']))
+    holidays.append((easter + timedelta(days=39), movable['Ascension Day']))
     midsummer_eve = get_midsummer_eve(year)
+    if midsummer_eve:
+        holidays.append((midsummer_eve, movable['Midsummer Eve']))
     midsummer_day = get_midsummer_day(year)
-    if midsummer_eve: holidays.add(midsummer_eve)
-    if midsummer_day: holidays.add(midsummer_day)
+    if midsummer_day:
+        holidays.append((midsummer_day, movable['Midsummer Day']))
     all_saints = get_all_saints_day(year)
-    if all_saints: holidays.add(all_saints)
+    if all_saints:
+        holidays.append((all_saints, movable["All Saints' Day"]))
     return holidays
 
-def count_working_day_holidays(year):
-    holidays = get_finnish_holidays(year)
-    working_day_holidays = [d for d in holidays if d.weekday() < 5]
-    return len(working_day_holidays), sorted(working_day_holidays)
+def count_working_day_holidays(year, lang='en'):
+    holidays = get_finnish_holidays(year, lang=lang)
+    working_day_holidays = [(d, name) for d, name in holidays if d.weekday() < 5]
+    working_day_holidays.sort()
+    return len(working_day_holidays), working_day_holidays
 
 def main():
     while True:
-        year_input = input("Enter the year for which to calculate Finnish working day holidays: ")
+        year_input = input("Enter the year for which to calculate Finnish midweek holidays: ")
         try:
             year = int(year_input)
             if year < 1900 or year > 2100:
