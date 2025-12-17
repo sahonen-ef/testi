@@ -1,0 +1,135 @@
+{"level":30,"time":"2025-10-08T06:58:05.698Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Listening on 53242"}
+{"level":30,"time":"2025-10-08T06:58:05.863Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:05.863Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:05.867Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:05.867Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9991:59)
+    at PlaywrightServer.setTimeout (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:10237:57)
+    at handleUnary (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:852:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+=============================================================
+{"level":30,"time":"2025-10-08T06:58:05.898Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:05.898Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:05.900Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:05.900Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9991:59)
+    at PlaywrightServer.setTimeout (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:10237:57)
+    at handleUnary (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:852:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+=============================================================
+{"level":30,"time":"2025-10-08T06:58:05.928Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:05.928Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:05.932Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:05.932Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9991:59)
+    at PlaywrightServer.setTimeout (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:10237:57)
+    at handleUnary (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:852:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+=============================================================
+{"level":30,"time":"2025-10-08T06:58:05.961Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:05.961Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:05.963Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:05.963Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9991:59)
+    at PlaywrightServer.setTimeout (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:10237:57)
+    at handleUnary (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:852:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+=============================================================
+{"level":30,"time":"2025-10-08T06:58:06.002Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.002Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.005Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.005Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9991:59)
+    at PlaywrightServer.setTimeout (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:10237:57)
+    at handleUnary (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:852:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+=============================================================
+{"level":30,"time":"2025-10-08T06:58:06.031Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.032Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.034Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.034Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9991:59)
+    at PlaywrightServer.setTimeout (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:10237:57)
+    at handleUnary (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:852:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+=============================================================
+{"level":30,"time":"2025-10-08T06:58:06.061Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.061Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.064Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.064Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9991:59)
+    at PlaywrightServer.setTimeout (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:10237:57)
+    at handleUnary (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:852:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+=============================================================
+{"level":30,"time":"2025-10-08T06:58:06.092Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.092Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.096Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.096Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9991:59)
+    at PlaywrightServer.setTimeout (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:10237:57)
+    at handleUnary (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:852:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+=============================================================
+{"level":30,"time":"2025-10-08T06:58:06.133Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.133Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.136Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.136Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9991:59)
+    at PlaywrightServer.setTimeout (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:10237:57)
+    at handleUnary (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:852:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+=============================================================
+{"level":30,"time":"2025-10-08T06:58:06.166Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.166Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.169Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.169Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9991:59)
+    at PlaywrightServer.setTimeout (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:10237:57)
+    at handleUnary (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:852:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+=============================================================
+{"level":30,"time":"2025-10-08T06:58:06.195Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.195Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9991:59)
+    at PlaywrightServer.setTimeout (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:10237:57)
+    at handleUnary (C:\Users\SariAhonen\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:852:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+=============================================================
+{"level":30,"time":"2025-10-08T06:58:06.219Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.219Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-10-08T06:58:06.258Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-10-08T06:58:06.258Z","pid":12388,"hostname":"LAPTOP-L82IJ3JN","msg":"End of node method closeAllBrowsers"}

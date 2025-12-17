@@ -47,6 +47,33 @@ API Test - Post Out Of Range Year
     Should Be Equal As Numbers    ${response.status_code}    200
     Should Contain    ${response.text}    Please enter a valid year between 1900 and 2100
 
+API Test - Leap Year Holidays
+    [Tags]    api    leapyear
+    Create Session    flask_session    ${BASE_URL}
+    ${data}=    Create Dictionary    year=2000    lang=en
+    ${response}=    POST On Session    flask_session    /    data=${data}
+    Should Be Equal As Numbers    ${response.status_code}    200
+    Should Contain    ${response.text}    In 2000, there are
+    Should Contain    ${response.text}    Good Friday
+
+API Test - Boundary Year Minimum
+    [Tags]    api    boundary
+    Create Session    flask_session    ${BASE_URL}
+    ${data}=    Create Dictionary    year=1900    lang=en
+    ${response}=    POST On Session    flask_session    /    data=${data}
+    Should Be Equal As Numbers    ${response.status_code}    200
+    Should Contain    ${response.text}    In 1900, there are
+    Should Contain    ${response.text}    public holidays
+
+API Test - Boundary Year Maximum
+    [Tags]    api    boundary
+    Create Session    flask_session    ${BASE_URL}
+    ${data}=    Create Dictionary    year=2100    lang=en
+    ${response}=    POST On Session    flask_session    /    data=${data}
+    Should Be Equal As Numbers    ${response.status_code}    200
+    Should Contain    ${response.text}    In 2100, there are
+    Should Contain    ${response.text}    public holidays
+
 *** Keywords ***
 Setup Test Session
     Create Session    flask_session    ${BASE_URL}

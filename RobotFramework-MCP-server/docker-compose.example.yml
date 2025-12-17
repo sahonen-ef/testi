@@ -1,0 +1,145 @@
+# Example: Integrating RobotFramework MCP Server with Your Application
+#
+# This file shows how to add the MCP server to your existing docker-compose.yml
+# This approach ensures both your application and the MCP server are on the same network
+
+version: '3.8'
+
+services:
+  # ============================================================================
+  # YOUR APPLICATION SERVICES (Example - replace with your actual services)
+  # ============================================================================
+
+  app:
+    image: your-app:latest
+    # OR use build context:
+    # build: .
+    container_name: my-app
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://db:5432/mydb
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - db
+      - redis
+    networks:
+      - app-network
+
+  db:
+    image: postgres:15
+    container_name: my-db
+    environment:
+      - POSTGRES_DB=mydb
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: my-redis
+    networks:
+      - app-network
+
+  # ============================================================================
+  # ROBOTFRAMEWORK MCP SERVER
+  # ============================================================================
+
+  robotframework-mcp:
+    build: ./RobotFramework-MCP-server
+    # OR use pre-built image:
+    # image: robotframework-mcp:latest
+    container_name: RobotFramework-mcp-persistent
+
+    # Keep container running (required for MCP server)
+    entrypoint: ["tail", "-f", "/dev/null"]
+
+    # Mount your test files and results directory
+    volumes:
+      # Mount tests as read-only
+      - ./tests:/tests:ro
+      # Mount results directory as read-write
+      - ./results:/results:rw
+
+    # Environment variables for the MCP server
+    environment:
+      - ROBOT_OUTPUT_DIR=/tmp/results
+      - RF_TESTS_DIR=/tests
+      - BROWSER=chromium
+      - HEADLESS=true
+      # Optional: Set base URL for tests
+      # - BASE_URL=http://app:8000
+
+    # Connect to the same network as your application
+    networks:
+      - app-network
+
+    # Ensure application starts before test container
+    depends_on:
+      - app
+
+# ============================================================================
+# NETWORKS
+# ============================================================================
+
+networks:
+  app-network:
+    driver: bridge
+
+# ============================================================================
+# VOLUMES
+# ============================================================================
+
+volumes:
+  db-data:
+
+# ============================================================================
+# USAGE INSTRUCTIONS
+# ============================================================================
+#
+# 1. Copy relevant parts to your existing docker-compose.yml
+# 2. Update volume paths for tests and results
+# 3. Ensure robotframework-mcp service is on the same network as your app
+# 4. Start all services:
+#      docker-compose up -d
+#
+# 5. Configure your AI tool to use the MCP server:
+#      docker exec -i RobotFramework-mcp-persistent python /app/server.py
+#
+# 6. In your Robot Framework tests, use service names to access your app:
+#      *** Variables ***
+#      ${BASE_URL}    http://app:8000
+#      ${API_URL}     http://app:8000/api
+#      ${DB_HOST}     db
+#      ${REDIS_HOST}  redis
+#
+# 7. Stop all services:
+#      docker-compose down
+#
+# ============================================================================
+# ALTERNATIVE: SEPARATE DOCKER-COMPOSE FOR TESTING
+# ============================================================================
+#
+# If you prefer to keep test infrastructure separate, create a
+# docker-compose.test.yml:
+#
+# version: '3.8'
+# services:
+#   robotframework-mcp:
+#     # ... same configuration as above ...
+#     networks:
+#       - default
+#       - your-app-network  # Connect to existing network
+#
+# networks:
+#   your-app-network:
+#     external: true  # Use existing network from your main docker-compose
+#
+# Then run:
+#   docker-compose -f docker-compose.yml up -d        # Start your app
+#   docker-compose -f docker-compose.test.yml up -d   # Start test container
+#
+# ============================================================================

@@ -1,0 +1,2535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-12-11T12:43:07.016160" rpa="false" schemaversion="5">
+<suite id="s1" name="Holidays Acceptance" source="/tests/holidays_acceptance.robot">
+<kw name="Set Browser Timeout" owner="Browser" type="SETUP">
+<arg>10s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-12-11T12:43:07.176340" elapsed="0.001699"/>
+</kw>
+<test id="s1-t1" name="Midweek Holidays in English" line="10">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:07.181186" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:07.180421" elapsed="0.000808"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:07.182584" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/c0375219-eef7-4e6d-842f-9525f25599de"}</msg>
+<msg time="2025-12-11T12:43:07.186859" level="INFO">Starting Browser process /usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js using at 127.0.0.1:44719</msg>
+<msg time="2025-12-11T12:43:07.682137" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/c0375219-eef7-4e6d-842f-9525f25599de"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:07.181365" elapsed="0.501036"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:07.685269" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:07.698079" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:07.698201" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:07.682722" elapsed="0.015579"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:07.762194" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:07.698557" elapsed="0.063918"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:07.179254" elapsed="0.583398"/>
+</kw>
+<kw name="When User enters year and language">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-12-11T12:43:07.765557" level="INFO">Fills the text '2025' in the given field.</msg>
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:07.764343" elapsed="0.044522"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-12-11T12:43:07.810888" level="INFO">Selects the option(s) en by attribute SelectAttribute.value from element select[name="lang"].</msg>
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:07.809204" elapsed="0.040822"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-12-11T12:43:07.852029" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:07.850453" elapsed="0.047561"/>
+</kw>
+<arg>2025</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<status status="PASS" start="2025-12-11T12:43:07.762959" elapsed="0.135277"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:07.943399" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"</msg>
+<msg time="2025-12-11T12:43:07.943671" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:07.899965" elapsed="0.043748"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:07.943982" elapsed="0.001038"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:07.945156" elapsed="0.000682"/>
+</kw>
+<arg>2025</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<status status="PASS" start="2025-12-11T12:43:07.898549" elapsed="0.047389"/>
+</kw>
+<kw name="And User should see holiday name">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:07.961843" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"</msg>
+<msg time="2025-12-11T12:43:07.962095" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:07.947032" elapsed="0.015233"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>${holiday_name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:07.962524" elapsed="0.001071"/>
+</kw>
+<arg>Good Friday</arg>
+<doc>Verifies that a specific holiday name appears in the results</doc>
+<status status="PASS" start="2025-12-11T12:43:07.946155" elapsed="0.017566"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:08.028777" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:07.965155" elapsed="0.063876"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:07.964187" elapsed="0.065018"/>
+</kw>
+<doc>Verifies that the system correctly displays Finnish midweek holidays in English for a standard year, ensuring basic functionality works as expected.</doc>
+<tag>english</tag>
+<tag>holidays</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="PASS" start="2025-12-11T12:43:07.178285" elapsed="0.851002"/>
+</test>
+<test id="s1-t2" name="Midweek Holidays in Finnish" line="19">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:08.040869" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.040109" elapsed="0.000805"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:08.042503" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/3b5c5157-2e7e-4c19-a369-3f71ab2cfe6e"}</msg>
+<msg time="2025-12-11T12:43:08.090371" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/3b5c5157-2e7e-4c19-a369-3f71ab2cfe6e"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.041059" elapsed="0.049598"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:08.093363" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:08.099947" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:08.100086" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.090959" elapsed="0.009240"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:08.153618" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.100494" elapsed="0.053472"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:08.039075" elapsed="0.115101"/>
+</kw>
+<kw name="When User enters year and language">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-12-11T12:43:08.156762" level="INFO">Fills the text '2025' in the given field.</msg>
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.155629" elapsed="0.032707"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-12-11T12:43:08.190117" level="INFO">Selects the option(s) fi by attribute SelectAttribute.value from element select[name="lang"].</msg>
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.188648" elapsed="0.033467"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-12-11T12:43:08.223912" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.222449" elapsed="0.076072"/>
+</kw>
+<arg>2025</arg>
+<arg>fi</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<status status="PASS" start="2025-12-11T12:43:08.154473" elapsed="0.144268"/>
+</kw>
+<kw name="Then User sees working day holidays for Finnish year">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:08.338590" level="INFO">Text: 'Finnish Midweek Holidays\nAnna vuosi (1900-2100):  Kieli: \nEnglish\nSuomi\n Näytä pyhät\nVuonna 2025 on 9 arkipäivälle (ma-pe) osuvaa pyhäpäivää Suomessa:\nViikonpäivä\tPäivämäärä\tPyhän nimi\nkeskiviikko\t2025-01-01\tUudenvuodenpäivä\nmaanantai\t2025-01-06\tLoppiainen\nperjantai\t2025-04-18\tPitkäperjantai\nmaanantai\t2025-04-21\t2. pääsiäispäivä\ntorstai\t2025-05-01\tVappu\ntorstai\t2025-05-29\tHelatorstai\nperjantai\t2025-06-20\tJuhannusaatto\ntorstai\t2025-12-25\tJoulupäivä\nperjantai\t2025-12-26\tTapaninpäivä'</msg>
+<msg time="2025-12-11T12:43:08.338828" level="INFO">${body_text} = Finnish Midweek Holidays
+Anna vuosi (1900-2100):  Kieli: 
+English
+Suomi
+ Näytä pyhät
+Vuonna 2025 on 9 arkipäivälle (ma-pe) osuvaa pyhäpäivää Suomessa:
+Viikonpäivä	Päivämäärä	Pyhän nimi
+keskiviikko	202...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.300309" elapsed="0.038557"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>Vuonna ${year} on</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.339182" elapsed="0.001204"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>arkipäivälle</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.340579" elapsed="0.000734"/>
+</kw>
+<arg>2025</arg>
+<doc>Verifies that holidays are displayed for the specified year in Finnish</doc>
+<status status="PASS" start="2025-12-11T12:43:08.299045" elapsed="0.042369"/>
+</kw>
+<kw name="And User should see holiday name">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:08.357921" level="INFO">Text: 'Finnish Midweek Holidays\nAnna vuosi (1900-2100):  Kieli: \nEnglish\nSuomi\n Näytä pyhät\nVuonna 2025 on 9 arkipäivälle (ma-pe) osuvaa pyhäpäivää Suomessa:\nViikonpäivä\tPäivämäärä\tPyhän nimi\nkeskiviikko\t2025-01-01\tUudenvuodenpäivä\nmaanantai\t2025-01-06\tLoppiainen\nperjantai\t2025-04-18\tPitkäperjantai\nmaanantai\t2025-04-21\t2. pääsiäispäivä\ntorstai\t2025-05-01\tVappu\ntorstai\t2025-05-29\tHelatorstai\nperjantai\t2025-06-20\tJuhannusaatto\ntorstai\t2025-12-25\tJoulupäivä\nperjantai\t2025-12-26\tTapaninpäivä'</msg>
+<msg time="2025-12-11T12:43:08.358353" level="INFO">${body_text} = Finnish Midweek Holidays
+Anna vuosi (1900-2100):  Kieli: 
+English
+Suomi
+ Näytä pyhät
+Vuonna 2025 on 9 arkipäivälle (ma-pe) osuvaa pyhäpäivää Suomessa:
+Viikonpäivä	Päivämäärä	Pyhän nimi
+keskiviikko	202...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.342530" elapsed="0.015916"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>${holiday_name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.358754" elapsed="0.001215"/>
+</kw>
+<arg>Pitkäperjantai</arg>
+<doc>Verifies that a specific holiday name appears in the results</doc>
+<status status="PASS" start="2025-12-11T12:43:08.341630" elapsed="0.018463"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:08.436125" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.361349" elapsed="0.075029"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:08.360400" elapsed="0.076148"/>
+</kw>
+<doc>Verifies that the system correctly displays Finnish midweek holidays in Finnish language, ensuring localization works properly.</doc>
+<tag>finnish</tag>
+<tag>holidays</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="PASS" start="2025-12-11T12:43:08.036180" elapsed="0.400449"/>
+</test>
+<test id="s1-t3" name="Past Year Holidays" line="28">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:08.446159" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.445360" elapsed="0.000844"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:08.447706" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/c4bf7d4b-c267-4320-aeaa-829a43b4f851"}</msg>
+<msg time="2025-12-11T12:43:08.496484" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/c4bf7d4b-c267-4320-aeaa-829a43b4f851"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.446360" elapsed="0.050413"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:08.499860" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:08.507087" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:08.507244" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.497140" elapsed="0.010223"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:08.560396" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.507676" elapsed="0.052969"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:08.444239" elapsed="0.116570"/>
+</kw>
+<kw name="When User enters year and language">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-12-11T12:43:08.563464" level="INFO">Fills the text '2020' in the given field.</msg>
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.562329" elapsed="0.032392"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-12-11T12:43:08.596594" level="INFO">Selects the option(s) en by attribute SelectAttribute.value from element select[name="lang"].</msg>
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.595096" elapsed="0.033485"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-12-11T12:43:08.630219" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.628906" elapsed="0.051468"/>
+</kw>
+<arg>2020</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<status status="PASS" start="2025-12-11T12:43:08.561096" elapsed="0.119501"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:08.720677" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2020, there are 8 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2020-01-01\tNew Year's Day\nMonday\t2020-01-06\tEpiphany\nFriday\t2020-04-10\tGood Friday\nMonday\t2020-04-13\tEaster Monday\nFriday\t2020-05-01\tMay Day\nThursday\t2020-05-21\tAscension Day\nFriday\t2020-06-19\tMidsummer Eve\nFriday\t2020-12-25\tChristmas Day"</msg>
+<msg time="2025-12-11T12:43:08.720918" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2020, there are 8 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.682170" elapsed="0.038786"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.721210" elapsed="0.001301"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.722831" elapsed="0.000777"/>
+</kw>
+<arg>2020</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<status status="PASS" start="2025-12-11T12:43:08.680895" elapsed="0.042817"/>
+</kw>
+<kw name="And User should see holiday name">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:08.738887" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2020, there are 8 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2020-01-01\tNew Year's Day\nMonday\t2020-01-06\tEpiphany\nFriday\t2020-04-10\tGood Friday\nMonday\t2020-04-13\tEaster Monday\nFriday\t2020-05-01\tMay Day\nThursday\t2020-05-21\tAscension Day\nFriday\t2020-06-19\tMidsummer Eve\nFriday\t2020-12-25\tChristmas Day"</msg>
+<msg time="2025-12-11T12:43:08.739153" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2020, there are 8 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.724830" elapsed="0.014371"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>${holiday_name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.739450" elapsed="0.001038"/>
+</kw>
+<arg>Christmas Day</arg>
+<doc>Verifies that a specific holiday name appears in the results</doc>
+<status status="PASS" start="2025-12-11T12:43:08.723959" elapsed="0.016653"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:08.805802" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.741770" elapsed="0.064297"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:08.740917" elapsed="0.065325"/>
+</kw>
+<doc>Verifies that the system correctly calculates and displays holidays for past years, ensuring historical data accuracy.</doc>
+<tag>english</tag>
+<tag>historical</tag>
+<tag>holidays</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<status status="PASS" start="2025-12-11T12:43:08.441021" elapsed="0.365305"/>
+</test>
+<test id="s1-t4" name="Future Year Holidays" line="37">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:08.815835" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.815124" elapsed="0.000754"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:08.817428" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/3b5f6c3b-9fd2-4598-a082-0adc01e12ca1"}</msg>
+<msg time="2025-12-11T12:43:08.865460" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/3b5f6c3b-9fd2-4598-a082-0adc01e12ca1"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.816046" elapsed="0.049719"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:08.868584" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:08.875608" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:08.875739" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.866058" elapsed="0.009798"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:08.928360" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.876197" elapsed="0.052409"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:08.814053" elapsed="0.114717"/>
+</kw>
+<kw name="When User enters year and language">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-12-11T12:43:08.931290" level="INFO">Fills the text '2030' in the given field.</msg>
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.930221" elapsed="0.032777"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-12-11T12:43:08.964900" level="INFO">Selects the option(s) en by attribute SelectAttribute.value from element select[name="lang"].</msg>
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.963308" elapsed="0.033259"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-12-11T12:43:08.998187" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:08.996915" elapsed="0.050523"/>
+</kw>
+<arg>2030</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<status status="PASS" start="2025-12-11T12:43:08.929063" elapsed="0.118571"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:09.088180" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2030, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nTuesday\t2030-01-01\tNew Year's Day\nFriday\t2030-04-19\tGood Friday\nMonday\t2030-04-22\tEaster Monday\nWednesday\t2030-05-01\tMay Day\nThursday\t2030-05-30\tAscension Day\nFriday\t2030-06-21\tMidsummer Eve\nFriday\t2030-12-06\tIndependence Day\nWednesday\t2030-12-25\tChristmas Day\nThursday\t2030-12-26\tSt. Stephen's Day"</msg>
+<msg time="2025-12-11T12:43:09.088478" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2030, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.049152" elapsed="0.039364"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.088762" elapsed="0.001115"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.090052" elapsed="0.000767"/>
+</kw>
+<arg>2030</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<status status="PASS" start="2025-12-11T12:43:09.047947" elapsed="0.042974"/>
+</kw>
+<kw name="And User should see holiday name">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:09.106603" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2030, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nTuesday\t2030-01-01\tNew Year's Day\nFriday\t2030-04-19\tGood Friday\nMonday\t2030-04-22\tEaster Monday\nWednesday\t2030-05-01\tMay Day\nThursday\t2030-05-30\tAscension Day\nFriday\t2030-06-21\tMidsummer Eve\nFriday\t2030-12-06\tIndependence Day\nWednesday\t2030-12-25\tChristmas Day\nThursday\t2030-12-26\tSt. Stephen's Day"</msg>
+<msg time="2025-12-11T12:43:09.106838" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2030, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.091991" elapsed="0.014886"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>${holiday_name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.107128" elapsed="0.001068"/>
+</kw>
+<arg>New Year's Day</arg>
+<doc>Verifies that a specific holiday name appears in the results</doc>
+<status status="PASS" start="2025-12-11T12:43:09.091137" elapsed="0.017167"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:09.184897" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.109601" elapsed="0.075552"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:09.108586" elapsed="0.076749"/>
+</kw>
+<doc>Verifies that the system correctly calculates and displays holidays for future years, ensuring forward calculation accuracy.</doc>
+<tag>english</tag>
+<tag>future</tag>
+<tag>holidays</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<status status="PASS" start="2025-12-11T12:43:08.811460" elapsed="0.373958"/>
+</test>
+<test id="s1-t5" name="Validate Holidays for Earliest Supported Year" line="46">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:09.194563" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.193544" elapsed="0.001075"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:09.196170" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/91b5a9db-5aad-4efa-b99a-4670073532a1"}</msg>
+<msg time="2025-12-11T12:43:09.246442" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/91b5a9db-5aad-4efa-b99a-4670073532a1"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.194782" elapsed="0.051941"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:09.249758" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:09.257761" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:09.257946" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.247069" elapsed="0.011003"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:09.312523" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.258379" elapsed="0.054375"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:09.192175" elapsed="0.120739"/>
+</kw>
+<kw name="When User enters year and language">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-12-11T12:43:09.315830" level="INFO">Fills the text '1900' in the given field.</msg>
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.314636" elapsed="0.032189"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-12-11T12:43:09.348629" level="INFO">Selects the option(s) en by attribute SelectAttribute.value from element select[name="lang"].</msg>
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.347139" elapsed="0.032913"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-12-11T12:43:09.381770" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.380446" elapsed="0.049738"/>
+</kw>
+<arg>1900</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<status status="PASS" start="2025-12-11T12:43:09.313199" elapsed="0.117226"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:09.470250" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 1900, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nMonday\t1900-01-01\tNew Year's Day\nFriday\t1900-04-13\tGood Friday\nMonday\t1900-04-16\tEaster Monday\nTuesday\t1900-05-01\tMay Day\nThursday\t1900-05-24\tAscension Day\nFriday\t1900-06-22\tMidsummer Eve\nThursday\t1900-12-06\tIndependence Day\nTuesday\t1900-12-25\tChristmas Day\nWednesday\t1900-12-26\tSt. Stephen's Day"</msg>
+<msg time="2025-12-11T12:43:09.470504" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 1900, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.431968" elapsed="0.038575"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.470797" elapsed="0.001072"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.472011" elapsed="0.000737"/>
+</kw>
+<arg>1900</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<status status="PASS" start="2025-12-11T12:43:09.430733" elapsed="0.042116"/>
+</kw>
+<kw name="And User should see at least one holiday displayed">
+<kw name="Get Element Count" owner="Browser">
+<msg time="2025-12-11T12:43:09.480248" level="INFO">${holiday_rows} = 9</msg>
+<var>${holiday_rows}</var>
+<arg>css=tbody tr</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.473936" elapsed="0.006407"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${holiday_rows} &gt; 0</arg>
+<arg>msg=No holidays found in the results table</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.480628" elapsed="0.001255"/>
+</kw>
+<doc>Verifies that at least one holiday is shown in the results table</doc>
+<status status="PASS" start="2025-12-11T12:43:09.473058" elapsed="0.008974"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:09.564728" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.483253" elapsed="0.081752"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:09.482348" elapsed="0.082822"/>
+</kw>
+<doc>Verifies that the system correctly returns holidays for the earliest supported year, ensuring boundary year handling works as expected.</doc>
+<tag>boundary</tag>
+<tag>english</tag>
+<tag>holidays</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<status status="PASS" start="2025-12-11T12:43:09.189540" elapsed="0.375704"/>
+</test>
+<test id="s1-t6" name="Validate Holidays for Far Future Year" line="55">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:09.574802" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.573936" elapsed="0.000921"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:09.576674" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/a76f1e5f-d604-4200-b9f7-51de51bac117"}</msg>
+<msg time="2025-12-11T12:43:09.633475" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/a76f1e5f-d604-4200-b9f7-51de51bac117"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.575040" elapsed="0.058915"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:09.637268" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:09.645622" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:09.645752" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.634390" elapsed="0.011474"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:09.706389" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.646195" elapsed="0.060493"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:09.572737" elapsed="0.134150"/>
+</kw>
+<kw name="When User enters year and language">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-12-11T12:43:09.710315" level="INFO">Fills the text '2100' in the given field.</msg>
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.708767" elapsed="0.036774"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-12-11T12:43:09.747466" level="INFO">Selects the option(s) en by attribute SelectAttribute.value from element select[name="lang"].</msg>
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.745866" elapsed="0.033611"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-12-11T12:43:09.781215" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.779870" elapsed="0.049977"/>
+</kw>
+<arg>2100</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<status status="PASS" start="2025-12-11T12:43:09.707227" elapsed="0.122822"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:09.868029" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2100, there are 7 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nFriday\t2100-01-01\tNew Year's Day\nWednesday\t2100-01-06\tEpiphany\nFriday\t2100-03-26\tGood Friday\nMonday\t2100-03-29\tEaster Monday\nThursday\t2100-05-06\tAscension Day\nFriday\t2100-06-25\tMidsummer Eve\nMonday\t2100-12-06\tIndependence Day"</msg>
+<msg time="2025-12-11T12:43:09.868265" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2100, there are 7 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.831593" elapsed="0.036709"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.868552" elapsed="0.001094"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.869818" elapsed="0.000652"/>
+</kw>
+<arg>2100</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<status status="PASS" start="2025-12-11T12:43:09.830353" elapsed="0.040220"/>
+</kw>
+<kw name="And User should see at least one holiday displayed">
+<kw name="Get Element Count" owner="Browser">
+<msg time="2025-12-11T12:43:09.876916" level="INFO">${holiday_rows} = 7</msg>
+<var>${holiday_rows}</var>
+<arg>css=tbody tr</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.871526" elapsed="0.005467"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${holiday_rows} &gt; 0</arg>
+<arg>msg=No holidays found in the results table</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.877240" elapsed="0.001098"/>
+</kw>
+<doc>Verifies that at least one holiday is shown in the results table</doc>
+<status status="PASS" start="2025-12-11T12:43:09.870783" elapsed="0.007684"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:09.945813" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.879687" elapsed="0.066395"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:09.878826" elapsed="0.067457"/>
+</kw>
+<doc>Verifies that the system correctly returns holidays for a far future year, ensuring future boundary year handling works as expected.</doc>
+<tag>boundary</tag>
+<tag>english</tag>
+<tag>holidays</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<status status="PASS" start="2025-12-11T12:43:09.569956" elapsed="0.376414"/>
+</test>
+<test id="s1-t7" name="Handle Unsupported Year Input" line="64">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:09.955165" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.954404" elapsed="0.000803"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:09.956769" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/e17444ce-79ef-41ed-b37d-cc162f30f6df"}</msg>
+<msg time="2025-12-11T12:43:10.004739" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/e17444ce-79ef-41ed-b37d-cc162f30f6df"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:09.955347" elapsed="0.049726"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:10.007622" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:10.014003" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:10.014142" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.005403" elapsed="0.008969"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:10.069867" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.014795" elapsed="0.055349"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:09.953274" elapsed="0.117042"/>
+</kw>
+<kw name="When User verifies min validation for year">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-12-11T12:43:10.072825" level="INFO">Fills the text '1500' in the given field.</msg>
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.071757" elapsed="0.031433"/>
+</kw>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-12-11T12:43:10.129590" level="INFO">Attribute is: '1900'</msg>
+<msg time="2025-12-11T12:43:10.129818" level="INFO">${min_value} = 1900</msg>
+<var>${min_value}</var>
+<arg>input[name="year"]</arg>
+<arg>min</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.103505" elapsed="0.026348"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${min_value}</arg>
+<arg>1900</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.130170" elapsed="0.001120"/>
+</kw>
+<arg>1500</arg>
+<doc>Verifies that the year input has min validation</doc>
+<status status="PASS" start="2025-12-11T12:43:10.070607" elapsed="0.060812"/>
+</kw>
+<kw name="Then Year input should have min attribute">
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-12-11T12:43:10.142616" level="INFO">Attribute is: '1900'</msg>
+<msg time="2025-12-11T12:43:10.142833" level="INFO">${min_value} = 1900</msg>
+<var>${min_value}</var>
+<arg>input[name="year"]</arg>
+<arg>min</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.132524" elapsed="0.010350"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${min_value}</arg>
+<arg>${expected_min}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.143125" elapsed="0.001246"/>
+</kw>
+<arg>1900</arg>
+<doc>Verifies the min attribute value</doc>
+<status status="PASS" start="2025-12-11T12:43:10.131690" elapsed="0.012789"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:10.215601" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.145705" elapsed="0.070154"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:10.144783" elapsed="0.071250"/>
+</kw>
+<doc>Verifies that HTML5 validation prevents submission of years below the minimum (1900).</doc>
+<tag>english</tag>
+<tag>negative</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<tag>validation</tag>
+<status status="PASS" start="2025-12-11T12:43:09.950649" elapsed="0.265466"/>
+</test>
+<test id="s1-t8" name="Handle Empty Year Input" line="72">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:10.225453" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.224721" elapsed="0.000775"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:10.227161" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/4db9511c-c418-4ead-8a99-7d65c94459b2"}</msg>
+<msg time="2025-12-11T12:43:10.274740" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/4db9511c-c418-4ead-8a99-7d65c94459b2"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.225638" elapsed="0.049442"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:10.277919" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:10.284939" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:10.285068" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.275384" elapsed="0.009793"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:10.339153" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.285498" elapsed="0.053890"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:10.223570" elapsed="0.115977"/>
+</kw>
+<kw name="When User submits form with empty year">
+<kw name="Clear Text" owner="Browser">
+<arg>input[name="year"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.341064" elapsed="0.037251"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-12-11T12:43:10.380327" level="INFO">Selects the option(s) en by attribute SelectAttribute.value from element select[name="lang"].</msg>
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>en</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.378678" elapsed="0.035677"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-12-11T12:43:10.415934" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.414665" elapsed="0.027950"/>
+</kw>
+<doc>Attempts to submit the form without entering a year</doc>
+<status status="PASS" start="2025-12-11T12:43:10.339876" elapsed="0.102935"/>
+</kw>
+<kw name="Then User should see HTML5 validation message">
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-12-11T12:43:10.454545" level="INFO">Attribute is: ''</msg>
+<msg time="2025-12-11T12:43:10.454788" level="INFO">${required_attr} = </msg>
+<var>${required_attr}</var>
+<arg>input[name="year"]</arg>
+<arg>required</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.444375" elapsed="0.010450"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2025-12-11T12:43:10.456204" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'NoneType'&gt;</msg>
+<arg>${required_attr}</arg>
+<arg>${None}</arg>
+<arg>msg=Year input should have required attribute</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.455111" elapsed="0.001171"/>
+</kw>
+<doc>Verifies that HTML5 form validation prevents submission with empty required field</doc>
+<status status="PASS" start="2025-12-11T12:43:10.443103" elapsed="0.013327"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:10.543267" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.457709" elapsed="0.085827"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:10.456774" elapsed="0.086952"/>
+</kw>
+<doc>Verifies that the system handles empty year input appropriately through HTML5 validation.</doc>
+<tag>english</tag>
+<tag>negative</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<tag>validation</tag>
+<status status="PASS" start="2025-12-11T12:43:10.221212" elapsed="0.322683"/>
+</test>
+<test id="s1-t9" name="Handle Invalid Year Format" line="80">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:10.552514" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.551703" elapsed="0.000854"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:10.554020" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/bcf138ce-8b66-4065-96d7-252a7f43229d"}</msg>
+<msg time="2025-12-11T12:43:10.602718" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/bcf138ce-8b66-4065-96d7-252a7f43229d"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.552696" elapsed="0.050330"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:10.606092" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:10.613853" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:10.613984" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.603338" elapsed="0.010773"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:10.666948" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.614419" elapsed="0.052791"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:10.550463" elapsed="0.116913"/>
+</kw>
+<kw name="When User verifies number input validation">
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-12-11T12:43:10.715073" level="INFO">Attribute is: 'number'</msg>
+<msg time="2025-12-11T12:43:10.715309" level="INFO">${input_type} = number</msg>
+<var>${input_type}</var>
+<arg>input[name="year"]</arg>
+<arg>type</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.668775" elapsed="0.046572"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${input_type}</arg>
+<arg>number</arg>
+<arg>msg=Year input should be type='number'</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.715604" elapsed="0.001246"/>
+</kw>
+<doc>Verifies that year input is type=number which prevents text entry</doc>
+<status status="PASS" start="2025-12-11T12:43:10.667666" elapsed="0.049320"/>
+</kw>
+<kw name="Then User should see year input has number type">
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-12-11T12:43:10.727874" level="INFO">Attribute is: 'number'</msg>
+<msg time="2025-12-11T12:43:10.728119" level="INFO">${input_type} = number</msg>
+<var>${input_type}</var>
+<arg>input[name="year"]</arg>
+<arg>type</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.718109" elapsed="0.010053"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${input_type}</arg>
+<arg>number</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.728431" elapsed="0.001003"/>
+</kw>
+<doc>Confirms that the year input field is properly configured as number type</doc>
+<status status="PASS" start="2025-12-11T12:43:10.717276" elapsed="0.012295"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:10.802790" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.730898" elapsed="0.072190"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:10.729927" elapsed="0.073332"/>
+</kw>
+<doc>Verifies that number input prevents non-numeric input via HTML5 validation.</doc>
+<tag>english</tag>
+<tag>negative</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<tag>validation</tag>
+<status status="PASS" start="2025-12-11T12:43:10.548242" elapsed="0.255096"/>
+</test>
+<test id="s1-t10" name="Year Above Maximum Range" line="88">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:10.812706" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.811952" elapsed="0.000798"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:10.814282" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/302b5c48-8bce-40a8-b94e-554393d5d28f"}</msg>
+<msg time="2025-12-11T12:43:10.863291" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/302b5c48-8bce-40a8-b94e-554393d5d28f"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.812896" elapsed="0.050677"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:10.866377" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:10.873031" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:10.873228" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.863892" elapsed="0.009448"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:10.927524" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.873637" elapsed="0.054122"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:10.810687" elapsed="0.117235"/>
+</kw>
+<kw name="When User verifies max validation for year">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-12-11T12:43:10.930561" level="INFO">Fills the text '2500' in the given field.</msg>
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.929437" elapsed="0.030978"/>
+</kw>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-12-11T12:43:10.986137" level="INFO">Attribute is: '2100'</msg>
+<msg time="2025-12-11T12:43:10.986371" level="INFO">${max_value} = 2100</msg>
+<var>${max_value}</var>
+<arg>input[name="year"]</arg>
+<arg>max</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.960733" elapsed="0.025675"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${max_value}</arg>
+<arg>2100</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.986691" elapsed="0.001048"/>
+</kw>
+<arg>2500</arg>
+<doc>Verifies that the year input has max validation</doc>
+<status status="PASS" start="2025-12-11T12:43:10.928214" elapsed="0.059632"/>
+</kw>
+<kw name="Then Year input should have max attribute">
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-12-11T12:43:10.998604" level="INFO">Attribute is: '2100'</msg>
+<msg time="2025-12-11T12:43:10.998820" level="INFO">${max_value} = 2100</msg>
+<var>${max_value}</var>
+<arg>input[name="year"]</arg>
+<arg>max</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.988972" elapsed="0.009883"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${max_value}</arg>
+<arg>${expected_max}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-12-11T12:43:10.999097" elapsed="0.001293"/>
+</kw>
+<arg>2100</arg>
+<doc>Verifies the max attribute value</doc>
+<status status="PASS" start="2025-12-11T12:43:10.988104" elapsed="0.012420"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:11.072946" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.001878" elapsed="0.071322"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:11.000864" elapsed="0.072505"/>
+</kw>
+<doc>Verifies that HTML5 validation prevents submission of years above the maximum (2100).</doc>
+<tag>english</tag>
+<tag>negative</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<tag>validation</tag>
+<status status="PASS" start="2025-12-11T12:43:10.808119" elapsed="0.265333"/>
+</test>
+<test id="s1-t11" name="Leap Year Holidays" line="96">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:11.082691" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.081919" elapsed="0.000817"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:11.084271" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/a951b8b4-4e83-4d63-959d-d2661c25267f"}</msg>
+<msg time="2025-12-11T12:43:11.134608" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/a951b8b4-4e83-4d63-959d-d2661c25267f"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.082925" elapsed="0.051982"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:11.137665" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:11.144587" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:11.144710" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.135269" elapsed="0.009545"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:11.197395" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.145134" elapsed="0.052522"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:11.080730" elapsed="0.117093"/>
+</kw>
+<kw name="When User enters year and language">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-12-11T12:43:11.200307" level="INFO">Fills the text '2000' in the given field.</msg>
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.199243" elapsed="0.033136"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-12-11T12:43:11.234344" level="INFO">Selects the option(s) en by attribute SelectAttribute.value from element select[name="lang"].</msg>
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.232730" elapsed="0.032750"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-12-11T12:43:11.267705" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.265803" elapsed="0.045603"/>
+</kw>
+<arg>2000</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<status status="PASS" start="2025-12-11T12:43:11.198118" elapsed="0.113564"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:11.349836" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2000, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nThursday\t2000-01-06\tEpiphany\nFriday\t2000-04-21\tGood Friday\nMonday\t2000-04-24\tEaster Monday\nMonday\t2000-05-01\tMay Day\nThursday\t2000-06-01\tAscension Day\nFriday\t2000-06-23\tMidsummer Eve\nWednesday\t2000-12-06\tIndependence Day\nMonday\t2000-12-25\tChristmas Day\nTuesday\t2000-12-26\tSt. Stephen's Day"</msg>
+<msg time="2025-12-11T12:43:11.350074" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2000, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.313188" elapsed="0.036923"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.350364" elapsed="0.001016"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.351618" elapsed="0.000724"/>
+</kw>
+<arg>2000</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<status status="PASS" start="2025-12-11T12:43:11.311995" elapsed="0.040451"/>
+</kw>
+<kw name="And User should see holiday name">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:11.366289" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2000, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nThursday\t2000-01-06\tEpiphany\nFriday\t2000-04-21\tGood Friday\nMonday\t2000-04-24\tEaster Monday\nMonday\t2000-05-01\tMay Day\nThursday\t2000-06-01\tAscension Day\nFriday\t2000-06-23\tMidsummer Eve\nWednesday\t2000-12-06\tIndependence Day\nMonday\t2000-12-25\tChristmas Day\nTuesday\t2000-12-26\tSt. Stephen's Day"</msg>
+<msg time="2025-12-11T12:43:11.366521" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2000, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.353441" elapsed="0.013117"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>${holiday_name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.366873" elapsed="0.001098"/>
+</kw>
+<arg>Good Friday</arg>
+<doc>Verifies that a specific holiday name appears in the results</doc>
+<status status="PASS" start="2025-12-11T12:43:11.352662" elapsed="0.015436"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:11.451274" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.369325" elapsed="0.082266"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:11.368463" elapsed="0.083302"/>
+</kw>
+<doc>Verifies that the system correctly calculates holidays for a leap year (e.g., 2000).</doc>
+<tag>holidays</tag>
+<tag>leapyear</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<status status="PASS" start="2025-12-11T12:43:11.078282" elapsed="0.373565"/>
+</test>
+<test id="s1-t12" name="Holidays in Swedish" line="105">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:11.461016" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.460202" elapsed="0.000864"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:11.462584" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/201886ba-80fa-4ff7-bebf-fdb50c14edad"}</msg>
+<msg time="2025-12-11T12:43:11.510806" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/201886ba-80fa-4ff7-bebf-fdb50c14edad"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.461237" elapsed="0.049844"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:11.513782" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:11.519108" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:11.519218" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.511380" elapsed="0.007936"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:11.573677" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.519653" elapsed="0.054288"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:11.459141" elapsed="0.114970"/>
+</kw>
+<kw name="When User enters year and language">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-12-11T12:43:11.576777" level="INFO">Fills the text '2025' in the given field.</msg>
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.575593" elapsed="0.030516"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-12-11T12:43:11.608015" level="INFO">Selects the option(s) en by attribute SelectAttribute.value from element select[name="lang"].</msg>
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.606488" elapsed="0.032541"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-12-11T12:43:11.640687" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.639358" elapsed="0.055673"/>
+</kw>
+<arg>2025</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<status status="PASS" start="2025-12-11T12:43:11.574431" elapsed="0.120811"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:11.732538" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"</msg>
+<msg time="2025-12-11T12:43:11.732780" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.696894" elapsed="0.035924"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.733074" elapsed="0.001083"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.734319" elapsed="0.000713"/>
+</kw>
+<arg>2025</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<status status="PASS" start="2025-12-11T12:43:11.695617" elapsed="0.039518"/>
+</kw>
+<kw name="And User should see holiday name">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:11.749226" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"</msg>
+<msg time="2025-12-11T12:43:11.749496" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.736164" elapsed="0.013377"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>${holiday_name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.749805" elapsed="0.001185"/>
+</kw>
+<arg>Good Friday</arg>
+<doc>Verifies that a specific holiday name appears in the results</doc>
+<status status="PASS" start="2025-12-11T12:43:11.735353" elapsed="0.015756"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:11.830218" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.752514" elapsed="0.077954"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:11.751430" elapsed="0.079220"/>
+</kw>
+<doc>Verifies that the system correctly displays holidays in Swedish. NOTE: Swedish not yet implemented, test skipped.</doc>
+<tag>holidays</tag>
+<tag>regression</tag>
+<tag>skip</tag>
+<tag>swedish</tag>
+<tag>ui</tag>
+<status status="PASS" start="2025-12-11T12:43:11.456231" elapsed="0.374502"/>
+</test>
+<test id="s1-t13" name="Holidays in Norwegian" line="114">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:11.839573" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.838727" elapsed="0.000891"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:11.841407" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/7a036ac8-d709-4eb0-a5b8-5d3eb49b4bd9"}</msg>
+<msg time="2025-12-11T12:43:11.893759" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/7a036ac8-d709-4eb0-a5b8-5d3eb49b4bd9"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.839769" elapsed="0.054303"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:11.897570" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:11.905823" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:11.906028" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.894462" elapsed="0.011728"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:11.959910" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.906596" elapsed="0.053565"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:11.837525" elapsed="0.122801"/>
+</kw>
+<kw name="When User enters year and language">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-12-11T12:43:11.963202" level="INFO">Fills the text '2025' in the given field.</msg>
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.961933" elapsed="0.031850"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-12-11T12:43:11.995657" level="INFO">Selects the option(s) en by attribute SelectAttribute.value from element select[name="lang"].</msg>
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:11.994090" elapsed="0.031908"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-12-11T12:43:12.027624" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.026307" elapsed="0.051642"/>
+</kw>
+<arg>2025</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<status status="PASS" start="2025-12-11T12:43:11.960615" elapsed="0.117590"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:12.116485" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"</msg>
+<msg time="2025-12-11T12:43:12.116746" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.079894" elapsed="0.036892"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.117042" elapsed="0.000998"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.118178" elapsed="0.000648"/>
+</kw>
+<arg>2025</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<status status="PASS" start="2025-12-11T12:43:12.078571" elapsed="0.040356"/>
+</kw>
+<kw name="And User should see holiday name">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:12.133026" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"</msg>
+<msg time="2025-12-11T12:43:12.133259" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.119923" elapsed="0.013373"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>${holiday_name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.133581" elapsed="0.001399"/>
+</kw>
+<arg>Good Friday</arg>
+<doc>Verifies that a specific holiday name appears in the results</doc>
+<status status="PASS" start="2025-12-11T12:43:12.119145" elapsed="0.016009"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:12.202162" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.136274" elapsed="0.066148"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:12.135483" elapsed="0.067144"/>
+</kw>
+<doc>Verifies that the system correctly displays holidays in Norwegian. NOTE: Norwegian not yet implemented, test skipped.</doc>
+<tag>holidays</tag>
+<tag>norwegian</tag>
+<tag>regression</tag>
+<tag>skip</tag>
+<tag>ui</tag>
+<status status="PASS" start="2025-12-11T12:43:11.834869" elapsed="0.367849"/>
+</test>
+<test id="s1-t14" name="Holidays in Estonian" line="123">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:12.212438" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.211708" elapsed="0.000774"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:12.213929" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/b3e26fdd-0875-4e31-b7cb-e2c7998973d7"}</msg>
+<msg time="2025-12-11T12:43:12.262843" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/b3e26fdd-0875-4e31-b7cb-e2c7998973d7"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.212637" elapsed="0.050467"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:12.265731" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:12.271311" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:12.271434" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.263421" elapsed="0.008246"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:12.324575" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.271988" elapsed="0.052826"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:12.210527" elapsed="0.114442"/>
+</kw>
+<kw name="When User enters year and language">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-12-11T12:43:12.327391" level="INFO">Fills the text '2025' in the given field.</msg>
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.326384" elapsed="0.032148"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-12-11T12:43:12.360291" level="INFO">Selects the option(s) en by attribute SelectAttribute.value from element select[name="lang"].</msg>
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.358842" elapsed="0.031338"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-12-11T12:43:12.391946" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.390502" elapsed="0.053988"/>
+</kw>
+<arg>2025</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<status status="PASS" start="2025-12-11T12:43:12.325253" elapsed="0.119431"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:12.481779" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"</msg>
+<msg time="2025-12-11T12:43:12.482032" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.446283" elapsed="0.035787"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.482329" elapsed="0.001613"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.484148" elapsed="0.000697"/>
+</kw>
+<arg>2025</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<status status="PASS" start="2025-12-11T12:43:12.445034" elapsed="0.039912"/>
+</kw>
+<kw name="And User should see holiday name">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:12.498009" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"</msg>
+<msg time="2025-12-11T12:43:12.498231" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.486054" elapsed="0.012214"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>${holiday_name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.498538" elapsed="0.001250"/>
+</kw>
+<arg>Good Friday</arg>
+<doc>Verifies that a specific holiday name appears in the results</doc>
+<status status="PASS" start="2025-12-11T12:43:12.485160" elapsed="0.014740"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:12.562724" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.501129" elapsed="0.061864"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:12.500233" elapsed="0.062940"/>
+</kw>
+<doc>Verifies that the system correctly displays holidays in Estonian. NOTE: Estonian not yet implemented, test skipped.</doc>
+<tag>estonian</tag>
+<tag>holidays</tag>
+<tag>regression</tag>
+<tag>skip</tag>
+<tag>ui</tag>
+<status status="PASS" start="2025-12-11T12:43:12.207264" elapsed="0.355987"/>
+</test>
+<test id="s1-t15" name="Validate Holidays for Year Just Above Minimum" line="132">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:12.572187" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.571311" elapsed="0.000931"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:12.573890" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/09624a79-e7ca-47b0-b1ee-ac088251e94f"}</msg>
+<msg time="2025-12-11T12:43:12.621352" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/09624a79-e7ca-47b0-b1ee-ac088251e94f"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.572386" elapsed="0.049290"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:12.624554" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:12.630273" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:12.630407" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.622025" elapsed="0.008524"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:12.683207" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.630828" elapsed="0.052637"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:12.570201" elapsed="0.113427"/>
+</kw>
+<kw name="When User enters year and language">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-12-11T12:43:12.686208" level="INFO">Fills the text '1901' in the given field.</msg>
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.685145" elapsed="0.031846"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-12-11T12:43:12.718786" level="INFO">Selects the option(s) en by attribute SelectAttribute.value from element select[name="lang"].</msg>
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.717344" elapsed="0.031798"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-12-11T12:43:12.750751" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.749452" elapsed="0.047627"/>
+</kw>
+<arg>1901</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<status status="PASS" start="2025-12-11T12:43:12.683953" elapsed="0.113353"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:12.843779" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 1901, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nTuesday\t1901-01-01\tNew Year's Day\nFriday\t1901-04-05\tGood Friday\nMonday\t1901-04-08\tEaster Monday\nWednesday\t1901-05-01\tMay Day\nThursday\t1901-05-16\tAscension Day\nFriday\t1901-06-21\tMidsummer Eve\nFriday\t1901-12-06\tIndependence Day\nWednesday\t1901-12-25\tChristmas Day\nThursday\t1901-12-26\tSt. Stephen's Day"</msg>
+<msg time="2025-12-11T12:43:12.844171" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 1901, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.799200" elapsed="0.045020"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.844491" elapsed="0.001149"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.845811" elapsed="0.000793"/>
+</kw>
+<arg>1901</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<status status="PASS" start="2025-12-11T12:43:12.797650" elapsed="0.049063"/>
+</kw>
+<kw name="And User should see at least one holiday displayed">
+<kw name="Get Element Count" owner="Browser">
+<msg time="2025-12-11T12:43:12.854009" level="INFO">${holiday_rows} = 9</msg>
+<var>${holiday_rows}</var>
+<arg>css=tbody tr</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.847792" elapsed="0.006287"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${holiday_rows} &gt; 0</arg>
+<arg>msg=No holidays found in the results table</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.854328" elapsed="0.001229"/>
+</kw>
+<doc>Verifies that at least one holiday is shown in the results table</doc>
+<status status="PASS" start="2025-12-11T12:43:12.846950" elapsed="0.008735"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:12.932987" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.857081" elapsed="0.076220"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:12.856068" elapsed="0.077508"/>
+</kw>
+<doc>Verifies that the system correctly handles the year just above the minimum supported range (1901).</doc>
+<tag>boundary</tag>
+<tag>edgecase</tag>
+<tag>holidays</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<status status="PASS" start="2025-12-11T12:43:12.567689" elapsed="0.366024"/>
+</test>
+<test id="s1-t16" name="Validate Holidays for Year Just Below Maximum" line="141">
+<kw name="Given User opens the application">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-12-11T12:43:12.946610" level="INFO">${chromium_args} = ['--disable-blink-features=AutoupgradeMixedContent']</msg>
+<var>${chromium_args}</var>
+<arg>--disable-blink-features=AutoupgradeMixedContent</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.945403" elapsed="0.001267"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-12-11T12:43:12.948805" level="INFO">{"browser": "chromium", "headless": true, "args": ["--disable-blink-features=AutoupgradeMixedContent"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/tmp/results/browser/traces/temp/8675e257-002f-4762-9c4d-8a69c55aed29"}</msg>
+<msg time="2025-12-11T12:43:13.017325" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--disable-blink-features=AutoupgradeMixedContent"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/tmp/results/browser/traces/temp/8675e257-002f-4762-9c4d-8a69c55aed29"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<arg>args=${chromium_args}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:12.946918" elapsed="0.070709"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-12-11T12:43:13.021408" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-12-11T12:43:13.029231" level="INFO">Successfully created context. </msg>
+<msg time="2025-12-11T12:43:13.029395" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-12-11T12:43:13.017966" elapsed="0.011542"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-12-11T12:43:13.082684" level="INFO">Successfully initialized new page object and opened url: http://172.20.0.2:5000</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-12-11T12:43:13.029776" elapsed="0.053139"/>
+</kw>
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<status status="PASS" start="2025-12-11T12:43:12.943804" elapsed="0.139296"/>
+</kw>
+<kw name="When User enters year and language">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-12-11T12:43:13.085728" level="INFO">Fills the text '2099' in the given field.</msg>
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:13.084530" elapsed="0.031962"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-12-11T12:43:13.118316" level="INFO">Selects the option(s) en by attribute SelectAttribute.value from element select[name="lang"].</msg>
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:13.116826" elapsed="0.031676"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-12-11T12:43:13.150168" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:13.148816" elapsed="0.045037"/>
+</kw>
+<arg>2099</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<status status="PASS" start="2025-12-11T12:43:13.083386" elapsed="0.110663"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-12-11T12:43:13.231181" level="INFO">Text: "Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2099, there are 8 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nThursday\t2099-01-01\tNew Year's Day\nTuesday\t2099-01-06\tEpiphany\nFriday\t2099-04-10\tGood Friday\nMonday\t2099-04-13\tEaster Monday\nFriday\t2099-05-01\tMay Day\nThursday\t2099-05-21\tAscension Day\nFriday\t2099-06-19\tMidsummer Eve\nFriday\t2099-12-25\tChristmas Day"</msg>
+<msg time="2025-12-11T12:43:13.231411" level="INFO">${body_text} = Finnish Midweek Holidays
+Enter year (1900-2100):  Language: 
+English
+Suomi
+ Show Holidays
+In 2099, there are 8 public holidays in Finland that fall on a working day (Mon-Fri):
+Weekday	Date	Holiday Nam...</msg>
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:13.195663" elapsed="0.035785"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:13.231761" elapsed="0.001045"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-12-11T12:43:13.232951" elapsed="0.000715"/>
+</kw>
+<arg>2099</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<status status="PASS" start="2025-12-11T12:43:13.194458" elapsed="0.039307"/>
+</kw>
+<kw name="And User should see at least one holiday displayed">
+<kw name="Get Element Count" owner="Browser">
+<msg time="2025-12-11T12:43:13.240118" level="INFO">${holiday_rows} = 8</msg>
+<var>${holiday_rows}</var>
+<arg>css=tbody tr</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2025-12-11T12:43:13.234792" elapsed="0.005372"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${holiday_rows} &gt; 0</arg>
+<arg>msg=No holidays found in the results table</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-12-11T12:43:13.240334" elapsed="0.001312"/>
+</kw>
+<doc>Verifies that at least one holiday is shown in the results table</doc>
+<status status="PASS" start="2025-12-11T12:43:13.233971" elapsed="0.007800"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-12-11T12:43:13.313727" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:13.242994" elapsed="0.071022"/>
+</kw>
+<doc>Closes the current browser instance</doc>
+<status status="PASS" start="2025-12-11T12:43:13.242064" elapsed="0.072126"/>
+</kw>
+<doc>Verifies that the system correctly handles the year just below the maximum supported range (2099).</doc>
+<tag>boundary</tag>
+<tag>edgecase</tag>
+<tag>holidays</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<status status="PASS" start="2025-12-11T12:43:12.939412" elapsed="0.374859"/>
+</test>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-12-11T12:43:13.322147" level="INFO">No browser open, doing nothing</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-11T12:43:13.319060" elapsed="0.003229"/>
+</kw>
+<status status="PASS" start="2025-12-11T12:43:07.017345" elapsed="6.305029"/>
+</suite>
+<statistics>
+<total>
+<stat pass="16" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="0" skip="0">boundary</stat>
+<stat pass="2" fail="0" skip="0">edgecase</stat>
+<stat pass="9" fail="0" skip="0">english</stat>
+<stat pass="1" fail="0" skip="0">estonian</stat>
+<stat pass="1" fail="0" skip="0">finnish</stat>
+<stat pass="1" fail="0" skip="0">future</stat>
+<stat pass="1" fail="0" skip="0">historical</stat>
+<stat pass="12" fail="0" skip="0">holidays</stat>
+<stat pass="1" fail="0" skip="0">leapyear</stat>
+<stat pass="4" fail="0" skip="0">negative</stat>
+<stat pass="1" fail="0" skip="0">norwegian</stat>
+<stat pass="14" fail="0" skip="0">regression</stat>
+<stat pass="3" fail="0" skip="0">skip</stat>
+<stat pass="2" fail="0" skip="0">smoke</stat>
+<stat pass="1" fail="0" skip="0">swedish</stat>
+<stat pass="16" fail="0" skip="0">ui</stat>
+<stat pass="4" fail="0" skip="0">validation</stat>
+</tag>
+<suite>
+<stat name="Holidays Acceptance" id="s1" pass="16" fail="0" skip="0">Holidays Acceptance</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,863 @@
+{"level":30,"time":"2025-12-11T12:43:07.601Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Listening on 127.0.0.1:44719"}
+{"level":30,"time":"2025-12-11T12:43:07.625Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:07.680Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:07.681Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:07.681Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:07.687Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:07.687Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:07.688Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@2fcff5d8ea9a0b049a59423873df6569\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=ff3681ba-88fa-43bd-b59f-75e9ecfb7d75\"}"}
+{"level":30,"time":"2025-12-11T12:43:07.688Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:07.696Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=c973c4ec-f374-40e7-b687-9d19f7ba7173 to 10000"}
+{"level":30,"time":"2025-12-11T12:43:07.696Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=c973c4ec-f374-40e7-b687-9d19f7ba7173"}
+{"level":30,"time":"2025-12-11T12:43:07.696Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:07.701Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:07.702Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@2fcff5d8ea9a0b049a59423873df6569\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=c973c4ec-f374-40e7-b687-9d19f7ba7173\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@14f0a8b85630d56870e909cf3546a20f\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=ff3681ba-88fa-43bd-b59f-75e9ecfb7d75\"}"}
+{"level":30,"time":"2025-12-11T12:43:07.732Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:07.733Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:07.761Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:07.767Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:07.768Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:07.807Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:07.813Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:07.813Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with select[name=\"lang\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:07.848Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Option entries: 2"}
+{"level":30,"time":"2025-12-11T12:43:07.848Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-12-11T12:43:07.848Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:07.853Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method click"}
+{"level":30,"time":"2025-12-11T12:43:07.854Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:07.896Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method click"}
+{"level":30,"time":"2025-12-11T12:43:07.903Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:07.903Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:07.942Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"}
+{"level":30,"time":"2025-12-11T12:43:07.942Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:07.950Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:07.950Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:07.960Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"}
+{"level":30,"time":"2025-12-11T12:43:07.960Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:07.968Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:07.971Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=139de3b8-02c8-41d7-9a5f-f94c7aa7eeda from context=c973c4ec-f374-40e7-b687-9d19f7ba7173 page stack"}
+{"level":30,"time":"2025-12-11T12:43:08.027Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:08.034Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:08.035Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:08.038Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:08.038Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:08.044Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:08.089Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:08.089Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:08.089Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:08.095Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:08.095Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:08.095Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@2d642b84270ccb35fa8dea1690efbeca\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=a64f8fd9-0ee5-4926-a1a8-51bd34650ec2\"}"}
+{"level":30,"time":"2025-12-11T12:43:08.095Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:08.098Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=315de40f-c8c3-4365-88d4-764e0ba59a4a to 10000"}
+{"level":30,"time":"2025-12-11T12:43:08.098Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=315de40f-c8c3-4365-88d4-764e0ba59a4a"}
+{"level":30,"time":"2025-12-11T12:43:08.098Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:08.103Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:08.103Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@2d642b84270ccb35fa8dea1690efbeca\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=315de40f-c8c3-4365-88d4-764e0ba59a4a\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@3c73bcbfa5d50fa81e773730bd188850\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=a64f8fd9-0ee5-4926-a1a8-51bd34650ec2\"}"}
+{"level":30,"time":"2025-12-11T12:43:08.127Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:08.127Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:08.152Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:08.158Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:08.158Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:08.187Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:08.191Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:08.191Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with select[name=\"lang\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:08.220Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Option entries: 2"}
+{"level":30,"time":"2025-12-11T12:43:08.220Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-12-11T12:43:08.220Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:08.225Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method click"}
+{"level":30,"time":"2025-12-11T12:43:08.225Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:08.297Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method click"}
+{"level":30,"time":"2025-12-11T12:43:08.303Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:08.303Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:08.337Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nAnna vuosi (1900-2100):  Kieli: \nEnglish\nSuomi\n Näytä pyhät\nVuonna 2025 on 9 arkipäivälle (ma-pe) osuvaa pyhäpäivää Suomessa:\nViikonpäivä\tPäivämäärä\tPyhän nimi\nkeskiviikko\t2025-01-01\tUudenvuodenpäivä\nmaanantai\t2025-01-06\tLoppiainen\nperjantai\t2025-04-18\tPitkäperjantai\nmaanantai\t2025-04-21\t2. pääsiäispäivä\ntorstai\t2025-05-01\tVappu\ntorstai\t2025-05-29\tHelatorstai\nperjantai\t2025-06-20\tJuhannusaatto\ntorstai\t2025-12-25\tJoulupäivä\nperjantai\t2025-12-26\tTapaninpäivä"}
+{"level":30,"time":"2025-12-11T12:43:08.337Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:08.345Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:08.345Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:08.356Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nAnna vuosi (1900-2100):  Kieli: \nEnglish\nSuomi\n Näytä pyhät\nVuonna 2025 on 9 arkipäivälle (ma-pe) osuvaa pyhäpäivää Suomessa:\nViikonpäivä\tPäivämäärä\tPyhän nimi\nkeskiviikko\t2025-01-01\tUudenvuodenpäivä\nmaanantai\t2025-01-06\tLoppiainen\nperjantai\t2025-04-18\tPitkäperjantai\nmaanantai\t2025-04-21\t2. pääsiäispäivä\ntorstai\t2025-05-01\tVappu\ntorstai\t2025-05-29\tHelatorstai\nperjantai\t2025-06-20\tJuhannusaatto\ntorstai\t2025-12-25\tJoulupäivä\nperjantai\t2025-12-26\tTapaninpäivä"}
+{"level":30,"time":"2025-12-11T12:43:08.357Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:08.364Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:08.366Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=976a3420-0290-405a-bdf7-43e63ad76cb5 from context=315de40f-c8c3-4365-88d4-764e0ba59a4a page stack"}
+{"level":30,"time":"2025-12-11T12:43:08.435Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:08.439Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:08.440Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:08.442Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:08.443Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:08.449Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:08.495Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:08.495Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:08.495Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:08.502Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:08.502Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:08.502Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@2b2a06701c74745860a3e32c1ffb1a47\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=2cee0923-761f-4791-aa66-f0e484c474ff\"}"}
+{"level":30,"time":"2025-12-11T12:43:08.502Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:08.506Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=53595990-70a1-4be6-8b2c-051a5e683014 to 10000"}
+{"level":30,"time":"2025-12-11T12:43:08.506Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=53595990-70a1-4be6-8b2c-051a5e683014"}
+{"level":30,"time":"2025-12-11T12:43:08.506Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:08.510Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:08.511Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@2b2a06701c74745860a3e32c1ffb1a47\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=53595990-70a1-4be6-8b2c-051a5e683014\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@feb3467f5050c84df0fb76c0741ad3a7\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=2cee0923-761f-4791-aa66-f0e484c474ff\"}"}
+{"level":30,"time":"2025-12-11T12:43:08.534Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:08.534Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:08.559Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:08.565Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:08.565Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:08.593Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:08.598Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:08.598Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with select[name=\"lang\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:08.627Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Option entries: 2"}
+{"level":30,"time":"2025-12-11T12:43:08.627Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-12-11T12:43:08.627Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:08.631Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method click"}
+{"level":30,"time":"2025-12-11T12:43:08.631Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:08.679Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method click"}
+{"level":30,"time":"2025-12-11T12:43:08.685Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:08.685Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:08.719Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2020, there are 8 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2020-01-01\tNew Year's Day\nMonday\t2020-01-06\tEpiphany\nFriday\t2020-04-10\tGood Friday\nMonday\t2020-04-13\tEaster Monday\nFriday\t2020-05-01\tMay Day\nThursday\t2020-05-21\tAscension Day\nFriday\t2020-06-19\tMidsummer Eve\nFriday\t2020-12-25\tChristmas Day"}
+{"level":30,"time":"2025-12-11T12:43:08.719Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:08.727Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:08.727Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:08.737Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2020, there are 8 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2020-01-01\tNew Year's Day\nMonday\t2020-01-06\tEpiphany\nFriday\t2020-04-10\tGood Friday\nMonday\t2020-04-13\tEaster Monday\nFriday\t2020-05-01\tMay Day\nThursday\t2020-05-21\tAscension Day\nFriday\t2020-06-19\tMidsummer Eve\nFriday\t2020-12-25\tChristmas Day"}
+{"level":30,"time":"2025-12-11T12:43:08.737Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:08.744Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:08.747Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=e2a4e121-b0a9-402e-9b0f-3c652ba3f3f6 from context=53595990-70a1-4be6-8b2c-051a5e683014 page stack"}
+{"level":30,"time":"2025-12-11T12:43:08.804Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:08.810Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:08.810Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:08.813Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:08.813Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:08.818Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:08.864Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:08.864Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:08.864Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:08.870Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:08.870Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:08.870Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@33db363b085f1838aa76d5072c09d345\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=1f5a3837-778b-42d7-a6c8-041698950c3b\"}"}
+{"level":30,"time":"2025-12-11T12:43:08.870Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:08.874Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=91f87942-8be5-4cd9-96ba-fc0ec313cedd to 10000"}
+{"level":30,"time":"2025-12-11T12:43:08.874Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=91f87942-8be5-4cd9-96ba-fc0ec313cedd"}
+{"level":30,"time":"2025-12-11T12:43:08.874Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:08.879Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:08.879Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@33db363b085f1838aa76d5072c09d345\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=91f87942-8be5-4cd9-96ba-fc0ec313cedd\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@f619e0a893b96f9905788188cfb8ce9b\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=1f5a3837-778b-42d7-a6c8-041698950c3b\"}"}
+{"level":30,"time":"2025-12-11T12:43:08.902Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:08.902Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:08.927Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:08.932Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:08.932Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:08.962Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:08.966Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:08.966Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with select[name=\"lang\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:08.995Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Option entries: 2"}
+{"level":30,"time":"2025-12-11T12:43:08.995Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-12-11T12:43:08.995Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:08.999Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method click"}
+{"level":30,"time":"2025-12-11T12:43:08.999Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:09.046Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method click"}
+{"level":30,"time":"2025-12-11T12:43:09.051Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:09.052Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:09.087Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2030, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nTuesday\t2030-01-01\tNew Year's Day\nFriday\t2030-04-19\tGood Friday\nMonday\t2030-04-22\tEaster Monday\nWednesday\t2030-05-01\tMay Day\nThursday\t2030-05-30\tAscension Day\nFriday\t2030-06-21\tMidsummer Eve\nFriday\t2030-12-06\tIndependence Day\nWednesday\t2030-12-25\tChristmas Day\nThursday\t2030-12-26\tSt. Stephen's Day"}
+{"level":30,"time":"2025-12-11T12:43:09.087Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:09.094Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:09.094Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:09.105Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2030, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nTuesday\t2030-01-01\tNew Year's Day\nFriday\t2030-04-19\tGood Friday\nMonday\t2030-04-22\tEaster Monday\nWednesday\t2030-05-01\tMay Day\nThursday\t2030-05-30\tAscension Day\nFriday\t2030-06-21\tMidsummer Eve\nFriday\t2030-12-06\tIndependence Day\nWednesday\t2030-12-25\tChristmas Day\nThursday\t2030-12-26\tSt. Stephen's Day"}
+{"level":30,"time":"2025-12-11T12:43:09.105Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:09.112Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:09.114Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=682e85ba-3568-47a2-81aa-f42f242a6737 from context=91f87942-8be5-4cd9-96ba-fc0ec313cedd page stack"}
+{"level":30,"time":"2025-12-11T12:43:09.184Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:09.188Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:09.188Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:09.191Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:09.191Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:09.197Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:09.245Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:09.245Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:09.245Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:09.251Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:09.251Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:09.251Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@e30bc7f6c2eca672c8545752b94e95e1\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=377eca43-7407-43ea-8b39-dc8985c3fc38\"}"}
+{"level":30,"time":"2025-12-11T12:43:09.251Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:09.255Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=229ef676-c7e1-418d-95ea-d6a1992aab16 to 10000"}
+{"level":30,"time":"2025-12-11T12:43:09.255Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=229ef676-c7e1-418d-95ea-d6a1992aab16"}
+{"level":30,"time":"2025-12-11T12:43:09.255Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:09.261Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:09.261Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@e30bc7f6c2eca672c8545752b94e95e1\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=229ef676-c7e1-418d-95ea-d6a1992aab16\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@ad10c2a0fb9d88246202b7fddf544ebf\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=377eca43-7407-43ea-8b39-dc8985c3fc38\"}"}
+{"level":30,"time":"2025-12-11T12:43:09.286Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:09.286Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:09.311Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:09.317Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:09.317Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:09.345Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:09.350Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:09.350Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with select[name=\"lang\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:09.378Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Option entries: 2"}
+{"level":30,"time":"2025-12-11T12:43:09.378Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-12-11T12:43:09.378Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:09.383Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method click"}
+{"level":30,"time":"2025-12-11T12:43:09.383Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:09.429Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method click"}
+{"level":30,"time":"2025-12-11T12:43:09.435Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:09.435Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:09.469Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 1900, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nMonday\t1900-01-01\tNew Year's Day\nFriday\t1900-04-13\tGood Friday\nMonday\t1900-04-16\tEaster Monday\nTuesday\t1900-05-01\tMay Day\nThursday\t1900-05-24\tAscension Day\nFriday\t1900-06-22\tMidsummer Eve\nThursday\t1900-12-06\tIndependence Day\nTuesday\t1900-12-25\tChristmas Day\nWednesday\t1900-12-26\tSt. Stephen's Day"}
+{"level":30,"time":"2025-12-11T12:43:09.469Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:09.476Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2025-12-11T12:43:09.476Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is disabled, return Locator: css=tbody tr in page."}
+{"level":30,"time":"2025-12-11T12:43:09.479Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getElementCount"}
+{"level":30,"time":"2025-12-11T12:43:09.486Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:09.487Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=7ad9a7ad-ac66-453c-9dbb-e5a4ae4742af from context=229ef676-c7e1-418d-95ea-d6a1992aab16 page stack"}
+{"level":30,"time":"2025-12-11T12:43:09.563Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:09.568Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:09.568Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:09.571Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:09.571Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:09.578Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:09.632Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:09.632Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:09.632Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:09.639Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:09.640Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:09.640Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@b85aa331010ee518314284f7f18cee38\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=69b4757a-188b-4ae7-8e6a-51beb4682ac3\"}"}
+{"level":30,"time":"2025-12-11T12:43:09.640Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:09.644Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=c602b458-fa35-4d44-9cc3-6903944a3c4a to 10000"}
+{"level":30,"time":"2025-12-11T12:43:09.644Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=c602b458-fa35-4d44-9cc3-6903944a3c4a"}
+{"level":30,"time":"2025-12-11T12:43:09.644Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:09.649Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:09.649Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@b85aa331010ee518314284f7f18cee38\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=c602b458-fa35-4d44-9cc3-6903944a3c4a\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@02d7fb7941323dd2a745905ac6875430\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=69b4757a-188b-4ae7-8e6a-51beb4682ac3\"}"}
+{"level":30,"time":"2025-12-11T12:43:09.676Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:09.676Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:09.705Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:09.712Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:09.712Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:09.744Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:09.749Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:09.749Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with select[name=\"lang\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:09.778Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Option entries: 2"}
+{"level":30,"time":"2025-12-11T12:43:09.778Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-12-11T12:43:09.778Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:09.782Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method click"}
+{"level":30,"time":"2025-12-11T12:43:09.782Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:09.828Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method click"}
+{"level":30,"time":"2025-12-11T12:43:09.834Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:09.834Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:09.867Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2100, there are 7 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nFriday\t2100-01-01\tNew Year's Day\nWednesday\t2100-01-06\tEpiphany\nFriday\t2100-03-26\tGood Friday\nMonday\t2100-03-29\tEaster Monday\nThursday\t2100-05-06\tAscension Day\nFriday\t2100-06-25\tMidsummer Eve\nMonday\t2100-12-06\tIndependence Day"}
+{"level":30,"time":"2025-12-11T12:43:09.867Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:09.873Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2025-12-11T12:43:09.873Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is disabled, return Locator: css=tbody tr in page."}
+{"level":30,"time":"2025-12-11T12:43:09.876Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getElementCount"}
+{"level":30,"time":"2025-12-11T12:43:09.882Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:09.884Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=cf013c25-70a4-4673-99c5-f80328674ca5 from context=c602b458-fa35-4d44-9cc3-6903944a3c4a page stack"}
+{"level":30,"time":"2025-12-11T12:43:09.945Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:09.949Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:09.949Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:09.952Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:09.952Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:09.958Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:10.003Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:10.003Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:10.003Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:10.009Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:10.009Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:10.009Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@c6915246340aa0dabc834f79ab015a68\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=505c8954-0813-4f3c-b965-5236a0abbfae\"}"}
+{"level":30,"time":"2025-12-11T12:43:10.009Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:10.012Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=a47221e5-b630-4369-8b5a-f7e27b8474d4 to 10000"}
+{"level":30,"time":"2025-12-11T12:43:10.013Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=a47221e5-b630-4369-8b5a-f7e27b8474d4"}
+{"level":30,"time":"2025-12-11T12:43:10.013Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:10.018Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:10.018Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@c6915246340aa0dabc834f79ab015a68\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=a47221e5-b630-4369-8b5a-f7e27b8474d4\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@31d17cfe8eeb1fb4ce1d239ab1d11960\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=505c8954-0813-4f3c-b965-5236a0abbfae\"}"}
+{"level":30,"time":"2025-12-11T12:43:10.043Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:10.043Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:10.069Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:10.074Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:10.074Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:10.102Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:10.106Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getElementAttribute"}
+{"level":30,"time":"2025-12-11T12:43:10.106Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:10.128Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved attribute for element input[name=\"year\"] containing 1900"}
+{"level":30,"time":"2025-12-11T12:43:10.128Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getElementAttribute"}
+{"level":30,"time":"2025-12-11T12:43:10.135Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getElementAttribute"}
+{"level":30,"time":"2025-12-11T12:43:10.135Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:10.141Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved attribute for element input[name=\"year\"] containing 1900"}
+{"level":30,"time":"2025-12-11T12:43:10.141Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getElementAttribute"}
+{"level":30,"time":"2025-12-11T12:43:10.148Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:10.150Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=b8ce6235-53b5-4f19-9456-34754a99510a from context=a47221e5-b630-4369-8b5a-f7e27b8474d4 page stack"}
+{"level":30,"time":"2025-12-11T12:43:10.214Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:10.220Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:10.220Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:10.222Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:10.222Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:10.228Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:10.273Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:10.273Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:10.273Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:10.279Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:10.279Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:10.279Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@9d6cf3d3958319114d27521cfc9b8499\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=f01f998b-de7f-41bb-b9b0-ac8134ae8aec\"}"}
+{"level":30,"time":"2025-12-11T12:43:10.279Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:10.283Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=96e5499e-f001-40e9-9243-907f7063f69d to 10000"}
+{"level":30,"time":"2025-12-11T12:43:10.283Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=96e5499e-f001-40e9-9243-907f7063f69d"}
+{"level":30,"time":"2025-12-11T12:43:10.283Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:10.288Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:10.288Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@9d6cf3d3958319114d27521cfc9b8499\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=96e5499e-f001-40e9-9243-907f7063f69d\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@ac4b640c46ce721f670c2d60afacd4cd\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=f01f998b-de7f-41bb-b9b0-ac8134ae8aec\"}"}
+{"level":30,"time":"2025-12-11T12:43:10.312Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:10.312Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:10.338Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:10.344Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method clearText"}
+{"level":30,"time":"2025-12-11T12:43:10.344Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:10.377Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method clearText"}
+{"level":30,"time":"2025-12-11T12:43:10.382Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:10.382Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with select[name=\"lang\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:10.413Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Option entries: 2"}
+{"level":30,"time":"2025-12-11T12:43:10.413Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-12-11T12:43:10.413Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:10.417Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method click"}
+{"level":30,"time":"2025-12-11T12:43:10.417Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:10.441Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method click"}
+{"level":30,"time":"2025-12-11T12:43:10.446Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getElementAttribute"}
+{"level":30,"time":"2025-12-11T12:43:10.446Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:10.453Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved attribute for element input[name=\"year\"] containing "}
+{"level":30,"time":"2025-12-11T12:43:10.453Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getElementAttribute"}
+{"level":30,"time":"2025-12-11T12:43:10.460Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:10.462Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=10ce5bed-0285-4fa2-9f99-88b8224fa7e7 from context=96e5499e-f001-40e9-9243-907f7063f69d page stack"}
+{"level":30,"time":"2025-12-11T12:43:10.542Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:10.547Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:10.547Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:10.549Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:10.549Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:10.555Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:10.601Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:10.601Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:10.601Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:10.608Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:10.608Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:10.608Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@dc17371675e9d78912db2bd8e451637e\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=a9d73685-0ca2-4294-b6d4-ce168cb04327\"}"}
+{"level":30,"time":"2025-12-11T12:43:10.608Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:10.612Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=e5521979-eedd-4b8f-9739-2d665ee9d814 to 10000"}
+{"level":30,"time":"2025-12-11T12:43:10.612Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=e5521979-eedd-4b8f-9739-2d665ee9d814"}
+{"level":30,"time":"2025-12-11T12:43:10.612Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:10.617Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:10.617Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@dc17371675e9d78912db2bd8e451637e\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=e5521979-eedd-4b8f-9739-2d665ee9d814\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@1f33f4e8b2cb3e92e25c730a3edfb3ff\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=a9d73685-0ca2-4294-b6d4-ce168cb04327\"}"}
+{"level":30,"time":"2025-12-11T12:43:10.641Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:10.641Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:10.665Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:10.671Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getElementAttribute"}
+{"level":30,"time":"2025-12-11T12:43:10.671Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:10.713Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved attribute for element input[name=\"year\"] containing number"}
+{"level":30,"time":"2025-12-11T12:43:10.713Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getElementAttribute"}
+{"level":30,"time":"2025-12-11T12:43:10.720Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getElementAttribute"}
+{"level":30,"time":"2025-12-11T12:43:10.720Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:10.726Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved attribute for element input[name=\"year\"] containing number"}
+{"level":30,"time":"2025-12-11T12:43:10.727Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getElementAttribute"}
+{"level":30,"time":"2025-12-11T12:43:10.733Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:10.735Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=dc558235-308c-44c6-a070-7ea10054325e from context=e5521979-eedd-4b8f-9739-2d665ee9d814 page stack"}
+{"level":30,"time":"2025-12-11T12:43:10.802Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:10.807Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:10.807Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:10.809Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:10.809Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:10.815Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:10.862Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:10.862Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:10.862Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:10.868Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:10.868Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:10.868Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@fe304c0da0cd8fb95ff6f9287a0e8ec1\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=b5351969-f980-4d81-8f77-c85468bb3c1b\"}"}
+{"level":30,"time":"2025-12-11T12:43:10.868Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:10.871Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=872d7571-e340-47d0-849b-7b8107b9b746 to 10000"}
+{"level":30,"time":"2025-12-11T12:43:10.871Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=872d7571-e340-47d0-849b-7b8107b9b746"}
+{"level":30,"time":"2025-12-11T12:43:10.872Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:10.876Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:10.876Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@fe304c0da0cd8fb95ff6f9287a0e8ec1\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=872d7571-e340-47d0-849b-7b8107b9b746\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@b131d89642c8235bb7bd0a7c95e01fde\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=b5351969-f980-4d81-8f77-c85468bb3c1b\"}"}
+{"level":30,"time":"2025-12-11T12:43:10.900Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:10.900Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:10.926Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:10.932Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:10.932Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:10.959Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:10.963Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getElementAttribute"}
+{"level":30,"time":"2025-12-11T12:43:10.964Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:10.985Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved attribute for element input[name=\"year\"] containing 2100"}
+{"level":30,"time":"2025-12-11T12:43:10.985Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getElementAttribute"}
+{"level":30,"time":"2025-12-11T12:43:10.991Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getElementAttribute"}
+{"level":30,"time":"2025-12-11T12:43:10.991Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:10.997Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved attribute for element input[name=\"year\"] containing 2100"}
+{"level":30,"time":"2025-12-11T12:43:10.997Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getElementAttribute"}
+{"level":30,"time":"2025-12-11T12:43:11.004Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:11.006Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=2f973325-5423-417c-bc48-8c463a586525 from context=872d7571-e340-47d0-849b-7b8107b9b746 page stack"}
+{"level":30,"time":"2025-12-11T12:43:11.072Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:11.077Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:11.077Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:11.079Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:11.079Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:11.085Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:11.133Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:11.133Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:11.133Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:11.139Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:11.139Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:11.139Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@72f1dfa8266ea72e485256dc7ce9dbbb\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=a19f2df1-f9e0-4c8a-a8ff-f9351a446f2f\"}"}
+{"level":30,"time":"2025-12-11T12:43:11.139Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:11.143Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=e0e5677d-69f9-4ca0-964c-a5cb77016ef5 to 10000"}
+{"level":30,"time":"2025-12-11T12:43:11.143Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=e0e5677d-69f9-4ca0-964c-a5cb77016ef5"}
+{"level":30,"time":"2025-12-11T12:43:11.143Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:11.147Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:11.148Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@72f1dfa8266ea72e485256dc7ce9dbbb\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=e0e5677d-69f9-4ca0-964c-a5cb77016ef5\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@0ae901f48f698cd7d04981c179be8558\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=a19f2df1-f9e0-4c8a-a8ff-f9351a446f2f\"}"}
+{"level":30,"time":"2025-12-11T12:43:11.170Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:11.170Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:11.196Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:11.201Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:11.202Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:11.231Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:11.235Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:11.235Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with select[name=\"lang\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:11.264Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Option entries: 2"}
+{"level":30,"time":"2025-12-11T12:43:11.264Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-12-11T12:43:11.264Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:11.269Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method click"}
+{"level":30,"time":"2025-12-11T12:43:11.269Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:11.310Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method click"}
+{"level":30,"time":"2025-12-11T12:43:11.315Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:11.315Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:11.348Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2000, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nThursday\t2000-01-06\tEpiphany\nFriday\t2000-04-21\tGood Friday\nMonday\t2000-04-24\tEaster Monday\nMonday\t2000-05-01\tMay Day\nThursday\t2000-06-01\tAscension Day\nFriday\t2000-06-23\tMidsummer Eve\nWednesday\t2000-12-06\tIndependence Day\nMonday\t2000-12-25\tChristmas Day\nTuesday\t2000-12-26\tSt. Stephen's Day"}
+{"level":30,"time":"2025-12-11T12:43:11.348Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:11.355Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:11.355Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:11.365Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2000, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nThursday\t2000-01-06\tEpiphany\nFriday\t2000-04-21\tGood Friday\nMonday\t2000-04-24\tEaster Monday\nMonday\t2000-05-01\tMay Day\nThursday\t2000-06-01\tAscension Day\nFriday\t2000-06-23\tMidsummer Eve\nWednesday\t2000-12-06\tIndependence Day\nMonday\t2000-12-25\tChristmas Day\nTuesday\t2000-12-26\tSt. Stephen's Day"}
+{"level":30,"time":"2025-12-11T12:43:11.365Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:11.371Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:11.373Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=82e62424-4dcd-4105-ae39-423bd5176af7 from context=e0e5677d-69f9-4ca0-964c-a5cb77016ef5 page stack"}
+{"level":30,"time":"2025-12-11T12:43:11.450Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:11.455Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:11.455Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:11.458Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:11.458Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:11.463Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:11.509Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:11.509Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:11.509Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:11.515Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:11.515Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:11.515Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@226707757b9c546bcf4a8509b919053a\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=57b063bb-0baf-43dd-8a5c-2d84dbc693f9\"}"}
+{"level":30,"time":"2025-12-11T12:43:11.515Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:11.518Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=8fb3c181-466c-4da5-8a6e-ed2eec40e7d9 to 10000"}
+{"level":30,"time":"2025-12-11T12:43:11.518Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=8fb3c181-466c-4da5-8a6e-ed2eec40e7d9"}
+{"level":30,"time":"2025-12-11T12:43:11.518Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:11.523Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:11.523Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@226707757b9c546bcf4a8509b919053a\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=8fb3c181-466c-4da5-8a6e-ed2eec40e7d9\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@732c97c93a58d2e5a1618a4c2c3dc446\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=57b063bb-0baf-43dd-8a5c-2d84dbc693f9\"}"}
+{"level":30,"time":"2025-12-11T12:43:11.546Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:11.546Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:11.572Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:11.578Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:11.578Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:11.605Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:11.609Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:11.609Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with select[name=\"lang\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:11.637Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Option entries: 2"}
+{"level":30,"time":"2025-12-11T12:43:11.637Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-12-11T12:43:11.637Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:11.642Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method click"}
+{"level":30,"time":"2025-12-11T12:43:11.642Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:11.694Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method click"}
+{"level":30,"time":"2025-12-11T12:43:11.699Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:11.700Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:11.731Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"}
+{"level":30,"time":"2025-12-11T12:43:11.731Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:11.738Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:11.738Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:11.748Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"}
+{"level":30,"time":"2025-12-11T12:43:11.748Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:11.754Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:11.756Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=9b66c2df-d769-4cea-9bfb-726f400ac341 from context=8fb3c181-466c-4da5-8a6e-ed2eec40e7d9 page stack"}
+{"level":30,"time":"2025-12-11T12:43:11.829Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:11.833Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:11.833Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:11.836Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:11.836Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:11.843Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:11.892Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:11.892Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:11.892Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:11.900Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:11.900Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:11.900Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@e88654a9fe1ba1e37f184cacf349c289\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=f3303383-d864-41a1-95c9-125ffad46bbc\"}"}
+{"level":30,"time":"2025-12-11T12:43:11.900Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:11.904Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=1628deb0-f7da-44ef-8e96-b002d8dca5db to 10000"}
+{"level":30,"time":"2025-12-11T12:43:11.904Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=1628deb0-f7da-44ef-8e96-b002d8dca5db"}
+{"level":30,"time":"2025-12-11T12:43:11.904Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:11.910Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:11.910Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@e88654a9fe1ba1e37f184cacf349c289\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=1628deb0-f7da-44ef-8e96-b002d8dca5db\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@22c30cd7c9612ee70f225b2dcb8887b9\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=f3303383-d864-41a1-95c9-125ffad46bbc\"}"}
+{"level":30,"time":"2025-12-11T12:43:11.933Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:11.933Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:11.958Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:11.964Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:11.964Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:11.992Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:11.997Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:11.997Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with select[name=\"lang\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:12.024Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Option entries: 2"}
+{"level":30,"time":"2025-12-11T12:43:12.024Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-12-11T12:43:12.024Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:12.029Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method click"}
+{"level":30,"time":"2025-12-11T12:43:12.029Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:12.077Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method click"}
+{"level":30,"time":"2025-12-11T12:43:12.082Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:12.082Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:12.115Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"}
+{"level":30,"time":"2025-12-11T12:43:12.115Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:12.122Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:12.122Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:12.132Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"}
+{"level":30,"time":"2025-12-11T12:43:12.132Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:12.138Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:12.140Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=4c9b5342-0c10-47d5-9983-affcbb494c13 from context=1628deb0-f7da-44ef-8e96-b002d8dca5db page stack"}
+{"level":30,"time":"2025-12-11T12:43:12.201Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:12.206Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:12.206Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:12.209Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:12.209Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:12.215Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:12.261Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:12.262Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:12.262Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:12.267Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:12.267Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:12.267Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@b0606c50b5a6332d809d3cd95f6a383b\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=9d2b88a0-e34d-482a-9115-a374ce00349c\"}"}
+{"level":30,"time":"2025-12-11T12:43:12.267Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:12.270Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=314f2851-a59b-4583-9f94-c6a553b19a8c to 10000"}
+{"level":30,"time":"2025-12-11T12:43:12.270Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=314f2851-a59b-4583-9f94-c6a553b19a8c"}
+{"level":30,"time":"2025-12-11T12:43:12.270Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:12.275Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:12.275Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@b0606c50b5a6332d809d3cd95f6a383b\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=314f2851-a59b-4583-9f94-c6a553b19a8c\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@38faf0ce5a242c82ba8e94dbf2a85b3b\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=9d2b88a0-e34d-482a-9115-a374ce00349c\"}"}
+{"level":30,"time":"2025-12-11T12:43:12.298Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:12.298Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:12.323Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:12.328Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:12.329Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:12.357Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:12.361Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:12.361Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with select[name=\"lang\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:12.388Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Option entries: 2"}
+{"level":30,"time":"2025-12-11T12:43:12.388Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-12-11T12:43:12.389Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:12.393Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method click"}
+{"level":30,"time":"2025-12-11T12:43:12.393Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:12.443Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method click"}
+{"level":30,"time":"2025-12-11T12:43:12.449Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:12.449Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:12.480Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"}
+{"level":30,"time":"2025-12-11T12:43:12.480Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:12.488Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:12.488Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:12.497Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2025, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nWednesday\t2025-01-01\tNew Year's Day\nMonday\t2025-01-06\tEpiphany\nFriday\t2025-04-18\tGood Friday\nMonday\t2025-04-21\tEaster Monday\nThursday\t2025-05-01\tMay Day\nThursday\t2025-05-29\tAscension Day\nFriday\t2025-06-20\tMidsummer Eve\nThursday\t2025-12-25\tChristmas Day\nFriday\t2025-12-26\tSt. Stephen's Day"}
+{"level":30,"time":"2025-12-11T12:43:12.497Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:12.503Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:12.505Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=a1a6b758-0bce-46d0-b18e-ba525be4893c from context=314f2851-a59b-4583-9f94-c6a553b19a8c page stack"}
+{"level":30,"time":"2025-12-11T12:43:12.561Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:12.566Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:12.566Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:12.569Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:12.569Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:12.575Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:12.620Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:12.620Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:12.620Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:12.626Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:12.626Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:12.626Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@9e2dbde6cc9bd391d9d593ac00436363\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=08584b6b-4271-4c68-b2ba-5784126bf33c\"}"}
+{"level":30,"time":"2025-12-11T12:43:12.626Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:12.629Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=fe281a12-0a10-46d2-b47b-1cca9b155169 to 10000"}
+{"level":30,"time":"2025-12-11T12:43:12.629Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=fe281a12-0a10-46d2-b47b-1cca9b155169"}
+{"level":30,"time":"2025-12-11T12:43:12.629Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:12.633Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:12.634Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@9e2dbde6cc9bd391d9d593ac00436363\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=fe281a12-0a10-46d2-b47b-1cca9b155169\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@a86b6c304014a20d926f71cf78ef7192\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=08584b6b-4271-4c68-b2ba-5784126bf33c\"}"}
+{"level":30,"time":"2025-12-11T12:43:12.657Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:12.657Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:12.682Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:12.687Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:12.687Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:12.716Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:12.720Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:12.720Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with select[name=\"lang\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:12.747Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Option entries: 2"}
+{"level":30,"time":"2025-12-11T12:43:12.748Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-12-11T12:43:12.748Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:12.752Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method click"}
+{"level":30,"time":"2025-12-11T12:43:12.752Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:12.795Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method click"}
+{"level":30,"time":"2025-12-11T12:43:12.802Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:12.802Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:12.842Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 1901, there are 9 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nTuesday\t1901-01-01\tNew Year's Day\nFriday\t1901-04-05\tGood Friday\nMonday\t1901-04-08\tEaster Monday\nWednesday\t1901-05-01\tMay Day\nThursday\t1901-05-16\tAscension Day\nFriday\t1901-06-21\tMidsummer Eve\nFriday\t1901-12-06\tIndependence Day\nWednesday\t1901-12-25\tChristmas Day\nThursday\t1901-12-26\tSt. Stephen's Day"}
+{"level":30,"time":"2025-12-11T12:43:12.842Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:12.850Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2025-12-11T12:43:12.850Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is disabled, return Locator: css=tbody tr in page."}
+{"level":30,"time":"2025-12-11T12:43:12.853Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getElementCount"}
+{"level":30,"time":"2025-12-11T12:43:12.860Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:12.862Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=c4f8845a-1ec5-4652-8688-c9952fa4974b from context=fe281a12-0a10-46d2-b47b-1cca9b155169 page stack"}
+{"level":30,"time":"2025-12-11T12:43:12.932Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:12.938Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:12.938Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:12.942Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:12.942Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:12.951Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:13.016Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2025-12-11T12:43:13.016Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-12-11T12:43:13.016Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-12-11T12:43:13.023Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:13.023Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-12-11T12:43:13.023Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@39d55ae16ec9d88b0b699b9ab22884ea\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=12504abe-8e37-4365-9134-65341353668f\"}"}
+{"level":30,"time":"2025-12-11T12:43:13.023Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Trace file: "}
+{"level":30,"time":"2025-12-11T12:43:13.028Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Setting default timeout for context context=bd6f92a1-bbfd-40eb-82da-9fb08aa57a8d to 10000"}
+{"level":30,"time":"2025-12-11T12:43:13.028Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active context: context=bd6f92a1-bbfd-40eb-82da-9fb08aa57a8d"}
+{"level":30,"time":"2025-12-11T12:43:13.028Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newContext"}
+{"level":30,"time":"2025-12-11T12:43:13.032Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:13.032Z","pid":1354,"hostname":"d171ba9cbeae","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@39d55ae16ec9d88b0b699b9ab22884ea\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=bd6f92a1-bbfd-40eb-82da-9fb08aa57a8d\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@23066fb12468694ff02563dcc2aec983\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=12504abe-8e37-4365-9134-65341353668f\"}"}
+{"level":30,"time":"2025-12-11T12:43:13.055Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Video path: undefined"}
+{"level":30,"time":"2025-12-11T12:43:13.055Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Changed active page"}
+{"level":30,"time":"2025-12-11T12:43:13.081Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method newPage"}
+{"level":30,"time":"2025-12-11T12:43:13.087Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:13.087Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with input[name=\"year\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:13.115Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method fillText"}
+{"level":30,"time":"2025-12-11T12:43:13.119Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:13.119Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with select[name=\"lang\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:13.147Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Option entries: 2"}
+{"level":30,"time":"2025-12-11T12:43:13.147Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-12-11T12:43:13.147Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-12-11T12:43:13.151Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method click"}
+{"level":30,"time":"2025-12-11T12:43:13.151Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-12-11T12:43:13.192Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method click"}
+{"level":30,"time":"2025-12-11T12:43:13.198Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:13.198Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is enabled, find Locator with css=body in page."}
+{"level":30,"time":"2025-12-11T12:43:13.230Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Retrieved text for element css=body containing Finnish Midweek Holidays\nEnter year (1900-2100):  Language: \nEnglish\nSuomi\n Show Holidays\nIn 2099, there are 8 public holidays in Finland that fall on a working day (Mon-Fri):\nWeekday\tDate\tHoliday Name\nThursday\t2099-01-01\tNew Year's Day\nTuesday\t2099-01-06\tEpiphany\nFriday\t2099-04-10\tGood Friday\nMonday\t2099-04-13\tEaster Monday\nFriday\t2099-05-01\tMay Day\nThursday\t2099-05-21\tAscension Day\nFriday\t2099-06-19\tMidsummer Eve\nFriday\t2099-12-25\tChristmas Day"}
+{"level":30,"time":"2025-12-11T12:43:13.230Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getText"}
+{"level":30,"time":"2025-12-11T12:43:13.237Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2025-12-11T12:43:13.237Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Strict mode is disabled, return Locator: css=tbody tr in page."}
+{"level":30,"time":"2025-12-11T12:43:13.239Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getElementCount"}
+{"level":30,"time":"2025-12-11T12:43:13.245Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:13.247Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Removed page=26d8aad6-cf5d-407c-9f88-b0a1d2949be0 from context=bd6f92a1-bbfd-40eb-82da-9fb08aa57a8d page stack"}
+{"level":30,"time":"2025-12-11T12:43:13.312Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:13.317Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:13.317Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:13.321Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-12-11T12:43:13.321Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13622:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/index.js:13873:57)
+    at Object.onReceiveHalfClose (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (/usr/local/lib/python3.10/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-12-11T12:43:13.325Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:13.325Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-12-11T12:43:13.379Z","pid":1354,"hostname":"d171ba9cbeae","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-12-11T12:43:13.380Z","pid":1354,"hostname":"d171ba9cbeae","msg":"End of node method closeAllBrowsers"}

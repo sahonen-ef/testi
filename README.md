@@ -1,35 +1,125 @@
-# testi
+# Finnish Holidays Application
 
-This repository contains a Python script `holidays_finland_user_year.py` for calculating Finnish public holidays that fall on working days (Monday–Friday) for any user-specified year between 1900 and 2100.
+> **Note**: This project calculates and displays Finnish midweek holidays for a given year, supporting multiple languages and robust error handling.
 
-## Script Overview
+## Features
 
-- **Fixed Holidays:**  
-  The script includes Finnish public holidays that always fall on the same date, such as New Year's Day, Epiphany, May Day, Independence Day, Christmas, and St. Stephen's Day.
+- **Holiday Calculation**: Displays public holidays that fall on weekdays (Monday-Friday).
+- **Multi-language Support**: English and Finnish.
+- **Boundary Testing**: Supports years between 1900 and 2100.
+- **Error Handling**: Validates input and provides meaningful error messages.
+- **Acceptance Tests**: Comprehensive Robot Framework test suite.
 
-- **Movable Holidays:**  
-  The script calculates holidays that change each year, including:
-  - Easter (and related holidays: Good Friday, Easter Monday, Ascension Day)
-  - Midsummer Eve and Midsummer Day (based on specific weekdays in June)
-  - All Saints’ Day (based on a specific Saturday in late October or early November)
+## Project Structure
 
-- **Usage:**  
-  Run the script and enter a year when prompted. The script will display:
-  - The number of Finnish public holidays that fall on a weekday (Monday–Friday) for the specified year.
-  - A list of those holidays with their respective dates and day names.
-
-## Example
-
-```
-Enter the year for which to calculate Finnish working day holidays: 2025
-In 2025, there are X public holidays in Finland that fall on a working day (Mon-Fri):
-- Monday, 2025-01-06
-- Friday, 2025-04-18
-- ...
+```plaintext
+.
+├── app.py                        # Flask application
+├── holidays_finland_user_year.py # Core logic for holiday calculation
+├── acceptance_tests/             # Robot Framework acceptance tests
+│   ├── holidays_acceptance.robot
+│   ├── api_tests.robot
+│   └── Dockerfile                # Docker setup for running tests
+├── test_holidays.py              # Unit tests
+├── Dockerfile                    # Docker setup for the application
+├── docker-compose.yml            # Docker Compose configuration
+└── README.md                     # Project documentation
 ```
 
-## Purpose
+## Getting Started
 
-This script is useful for anyone who needs to know which Finnish holidays impact working days in a given year, such as payroll, HR, or personal planning.
+### Prerequisites
 
----
+- Python 3.10+
+- Docker (optional, for containerized setup)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/sahonen-ef/testi.git
+   cd testi
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Running the Application
+
+1. Start the Flask application:
+
+   ```bash
+   python app.py
+   ```
+
+2. Open your browser and navigate to:
+
+   ```
+   http://127.0.0.1:5000
+   ```
+
+### Running Tests
+
+#### Unit Tests
+
+Run the unit tests using:
+
+```bash
+python -m unittest test_holidays.py
+```
+
+#### Acceptance Tests
+
+Run the Robot Framework tests using Docker:
+
+```bash
+cd acceptance_tests
+docker build -t rf-tests .
+docker run --rm rf-tests
+```
+
+Or run directly:
+
+```bash
+robot acceptance_tests/holidays_acceptance.robot
+```
+
+## Docker Setup
+
+### Build and Run the Application
+
+1. Build the Docker image:
+
+   ```bash
+   docker build -t finnish-holidays .
+   ```
+
+2. Run the container:
+
+   ```bash
+   docker run -p 5000:5000 finnish-holidays
+   ```
+
+### Using Docker Compose
+
+1. Start the services:
+
+   ```bash
+   docker-compose up
+   ```
+
+2. The application will be available at:
+
+   ```
+   http://127.0.0.1:5000
+   ```
+
+## Acknowledgments
+
+- [Robot Framework](https://robotframework.org/)
+- [Flask](https://flask.palletsprojects.com/)
+- [Docker](https://www.docker.com/)

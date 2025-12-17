@@ -1,0 +1,1089 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.7 on win32)" generated="20251008 09:58:05.164" rpa="false" schemaversion="4">
+<suite id="s1" name="Holidays Acceptance" source="C:\Users\SariAhonen\Copilot\testi\acceptance_tests\holidays_acceptance.robot">
+<kw name="Set Browser Timeout" library="Browser" type="SETUP">
+<arg>10s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.866" endtime="20251008 09:58:05.866"/>
+</kw>
+<test id="s1-t1" name="Midweek Holidays in English" line="7">
+<kw name="Given User opens the application">
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.867" endtime="20251008 09:58:05.867"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://flask_app:5000</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.867" endtime="20251008 09:58:05.867"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.867" endtime="20251008 09:58:05.867"/>
+</kw>
+<kw name="When User enters year and language">
+<arg>2025</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<kw name="Fill Text" library="Browser">
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.870" endtime="20251008 09:58:05.870"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.870" endtime="20251008 09:58:05.870"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.870" endtime="20251008 09:58:05.870"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.867" endtime="20251008 09:58:05.870"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<arg>2025</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<kw name="Get Text" library="Browser">
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.870" endtime="20251008 09:58:05.871"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.871" endtime="20251008 09:58:05.871"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.871" endtime="20251008 09:58:05.871"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.870" endtime="20251008 09:58:05.871"/>
+</kw>
+<kw name="And User should see holiday name">
+<arg>Good Friday</arg>
+<doc>Verifies that a specific holiday name appears in the results</doc>
+<kw name="Get Text" library="Browser">
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.871" endtime="20251008 09:58:05.871"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>${holiday_name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.871" endtime="20251008 09:58:05.871"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.871" endtime="20251008 09:58:05.871"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<doc>Closes the current browser instance</doc>
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.871" endtime="20251008 09:58:05.871"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.871" endtime="20251008 09:58:05.871"/>
+</kw>
+<doc>Verifies that the system correctly displays Finnish midweek holidays in English for a standard year, ensuring basic functionality works as expected.</doc>
+<tag>english</tag>
+<tag>holidays</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="PASS" starttime="20251008 09:58:05.866" endtime="20251008 09:58:05.871"/>
+</test>
+<test id="s1-t2" name="Midweek Holidays in Finnish" line="16">
+<kw name="Given User opens the application">
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.902" endtime="20251008 09:58:05.903"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://flask_app:5000</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.903" endtime="20251008 09:58:05.903"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.902" endtime="20251008 09:58:05.903"/>
+</kw>
+<kw name="When User enters year and language">
+<arg>2025</arg>
+<arg>fi</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<kw name="Fill Text" library="Browser">
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.903" endtime="20251008 09:58:05.903"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.903" endtime="20251008 09:58:05.903"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.903" endtime="20251008 09:58:05.903"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.903" endtime="20251008 09:58:05.903"/>
+</kw>
+<kw name="Then User sees working day holidays for Finnish year">
+<arg>2025</arg>
+<doc>Verifies that holidays are displayed for the specified year in Finnish</doc>
+<kw name="Get Text" library="Browser">
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.905" endtime="20251008 09:58:05.905"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>Vuonna ${year} on</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.905" endtime="20251008 09:58:05.905"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>arkipäivälle</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.905" endtime="20251008 09:58:05.905"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.905" endtime="20251008 09:58:05.905"/>
+</kw>
+<kw name="And User should see holiday name">
+<arg>Pitkäperjantai</arg>
+<doc>Verifies that a specific holiday name appears in the results</doc>
+<kw name="Get Text" library="Browser">
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.905" endtime="20251008 09:58:05.905"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>${holiday_name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.905" endtime="20251008 09:58:05.905"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.905" endtime="20251008 09:58:05.905"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<doc>Closes the current browser instance</doc>
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.906" endtime="20251008 09:58:05.906"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.906" endtime="20251008 09:58:05.907"/>
+</kw>
+<doc>Verifies that the system correctly displays Finnish midweek holidays in Finnish language, ensuring localization works properly.</doc>
+<tag>finnish</tag>
+<tag>holidays</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="PASS" starttime="20251008 09:58:05.899" endtime="20251008 09:58:05.907"/>
+</test>
+<test id="s1-t3" name="Past Year Holidays" line="25">
+<kw name="Given User opens the application">
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.934" endtime="20251008 09:58:05.934"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://flask_app:5000</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.934" endtime="20251008 09:58:05.935"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.934" endtime="20251008 09:58:05.935"/>
+</kw>
+<kw name="When User enters year and language">
+<arg>2020</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<kw name="Fill Text" library="Browser">
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.935" endtime="20251008 09:58:05.935"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.935" endtime="20251008 09:58:05.935"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.935" endtime="20251008 09:58:05.935"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.935" endtime="20251008 09:58:05.935"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<arg>2020</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<kw name="Get Text" library="Browser">
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.937" endtime="20251008 09:58:05.937"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.937" endtime="20251008 09:58:05.937"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.937" endtime="20251008 09:58:05.937"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.935" endtime="20251008 09:58:05.937"/>
+</kw>
+<kw name="And User should see holiday name">
+<arg>Christmas Day</arg>
+<doc>Verifies that a specific holiday name appears in the results</doc>
+<kw name="Get Text" library="Browser">
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.938" endtime="20251008 09:58:05.938"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>${holiday_name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.938" endtime="20251008 09:58:05.938"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.937" endtime="20251008 09:58:05.938"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<doc>Closes the current browser instance</doc>
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.938" endtime="20251008 09:58:05.938"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.938" endtime="20251008 09:58:05.938"/>
+</kw>
+<doc>Verifies that the system correctly calculates and displays holidays for past years, ensuring historical data accuracy.</doc>
+<tag>english</tag>
+<tag>historical</tag>
+<tag>holidays</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<status status="PASS" starttime="20251008 09:58:05.931" endtime="20251008 09:58:05.938"/>
+</test>
+<test id="s1-t4" name="Future Year Holidays" line="34">
+<kw name="Given User opens the application">
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.966" endtime="20251008 09:58:05.966"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://flask_app:5000</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.966" endtime="20251008 09:58:05.967"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.965" endtime="20251008 09:58:05.967"/>
+</kw>
+<kw name="When User enters year and language">
+<arg>2030</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<kw name="Fill Text" library="Browser">
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.967" endtime="20251008 09:58:05.967"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.967" endtime="20251008 09:58:05.967"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.967" endtime="20251008 09:58:05.967"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.967" endtime="20251008 09:58:05.968"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<arg>2030</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<kw name="Get Text" library="Browser">
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.968" endtime="20251008 09:58:05.968"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.968" endtime="20251008 09:58:05.968"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.968" endtime="20251008 09:58:05.968"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.968" endtime="20251008 09:58:05.968"/>
+</kw>
+<kw name="And User should see holiday name">
+<arg>New Year's Day</arg>
+<doc>Verifies that a specific holiday name appears in the results</doc>
+<kw name="Get Text" library="Browser">
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.968" endtime="20251008 09:58:05.968"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>${holiday_name}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.970" endtime="20251008 09:58:05.970"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.968" endtime="20251008 09:58:05.970"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<doc>Closes the current browser instance</doc>
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:05.970" endtime="20251008 09:58:05.970"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.970" endtime="20251008 09:58:05.970"/>
+</kw>
+<doc>Verifies that the system correctly calculates and displays holidays for future years, ensuring forward calculation accuracy.</doc>
+<tag>english</tag>
+<tag>future</tag>
+<tag>holidays</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<status status="PASS" starttime="20251008 09:58:05.963" endtime="20251008 09:58:05.970"/>
+</test>
+<test id="s1-t5" name="Validate Holidays for Earliest Supported Year" line="43">
+<kw name="Given User opens the application">
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.007" endtime="20251008 09:58:06.007"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://flask_app:5000</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.007" endtime="20251008 09:58:06.007"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.007" endtime="20251008 09:58:06.007"/>
+</kw>
+<kw name="When User enters year and language">
+<arg>1900</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<kw name="Fill Text" library="Browser">
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.008" endtime="20251008 09:58:06.008"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.008" endtime="20251008 09:58:06.009"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.009" endtime="20251008 09:58:06.009"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.007" endtime="20251008 09:58:06.009"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<arg>1900</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<kw name="Get Text" library="Browser">
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.009" endtime="20251008 09:58:06.009"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.009" endtime="20251008 09:58:06.009"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.009" endtime="20251008 09:58:06.010"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.009" endtime="20251008 09:58:06.010"/>
+</kw>
+<kw name="And User should see at least one holiday displayed">
+<doc>Verifies that at least one holiday is shown in the results table</doc>
+<kw name="Get Element Count" library="Browser">
+<var>${holiday_rows}</var>
+<arg>css=tbody tr</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.010" endtime="20251008 09:58:06.010"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${holiday_rows} &gt; 0</arg>
+<arg>msg=No holidays found in the results table</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.010" endtime="20251008 09:58:06.010"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.010" endtime="20251008 09:58:06.010"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<doc>Closes the current browser instance</doc>
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.011" endtime="20251008 09:58:06.011"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.010" endtime="20251008 09:58:06.011"/>
+</kw>
+<doc>Verifies that the system correctly returns holidays for the earliest supported year, ensuring boundary year handling works as expected.</doc>
+<tag>boundary</tag>
+<tag>english</tag>
+<tag>holidays</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<status status="PASS" starttime="20251008 09:58:06.004" endtime="20251008 09:58:06.011"/>
+</test>
+<test id="s1-t6" name="Validate Holidays for Far Future Year" line="52">
+<kw name="Given User opens the application">
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.036" endtime="20251008 09:58:06.037"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://flask_app:5000</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.037" endtime="20251008 09:58:06.037"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.036" endtime="20251008 09:58:06.037"/>
+</kw>
+<kw name="When User enters year and language">
+<arg>2100</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<kw name="Fill Text" library="Browser">
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.037" endtime="20251008 09:58:06.037"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.037" endtime="20251008 09:58:06.037"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.037" endtime="20251008 09:58:06.037"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.037" endtime="20251008 09:58:06.037"/>
+</kw>
+<kw name="Then User sees working day holidays for year">
+<arg>2100</arg>
+<doc>Verifies that holidays are displayed for the specified year in English</doc>
+<kw name="Get Text" library="Browser">
+<var>${body_text}</var>
+<arg>css=body</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.037" endtime="20251008 09:58:06.037"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>In ${year}, there are</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.037" endtime="20251008 09:58:06.040"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body_text}</arg>
+<arg>public holidays in Finland that fall on a working day</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.040" endtime="20251008 09:58:06.040"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.037" endtime="20251008 09:58:06.040"/>
+</kw>
+<kw name="And User should see at least one holiday displayed">
+<doc>Verifies that at least one holiday is shown in the results table</doc>
+<kw name="Get Element Count" library="Browser">
+<var>${holiday_rows}</var>
+<arg>css=tbody tr</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.040" endtime="20251008 09:58:06.040"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${holiday_rows} &gt; 0</arg>
+<arg>msg=No holidays found in the results table</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.040" endtime="20251008 09:58:06.041"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.040" endtime="20251008 09:58:06.041"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<doc>Closes the current browser instance</doc>
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.041" endtime="20251008 09:58:06.041"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.041" endtime="20251008 09:58:06.041"/>
+</kw>
+<doc>Verifies that the system correctly returns holidays for a far future year, ensuring future boundary year handling works as expected.</doc>
+<tag>boundary</tag>
+<tag>english</tag>
+<tag>holidays</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<status status="PASS" starttime="20251008 09:58:06.033" endtime="20251008 09:58:06.041"/>
+</test>
+<test id="s1-t7" name="Handle Unsupported Year Input" line="61">
+<kw name="Given User opens the application">
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.066" endtime="20251008 09:58:06.066"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://flask_app:5000</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.066" endtime="20251008 09:58:06.067"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.066" endtime="20251008 09:58:06.067"/>
+</kw>
+<kw name="When User enters year and language">
+<arg>1500</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<kw name="Fill Text" library="Browser">
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.067" endtime="20251008 09:58:06.067"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.067" endtime="20251008 09:58:06.067"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.067" endtime="20251008 09:58:06.069"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.067" endtime="20251008 09:58:06.069"/>
+</kw>
+<kw name="Then User should see error message containing">
+<arg>Please enter a valid year between 1900 and 2100</arg>
+<doc>Verifies that a specific error message is displayed</doc>
+<kw name="Get Text" library="Browser">
+<var>${error_text}</var>
+<arg>css=.error</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.069" endtime="20251008 09:58:06.069"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${error_text}</arg>
+<arg>${expected_message}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.069" endtime="20251008 09:58:06.069"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.069" endtime="20251008 09:58:06.069"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<doc>Closes the current browser instance</doc>
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.070" endtime="20251008 09:58:06.070"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.069" endtime="20251008 09:58:06.070"/>
+</kw>
+<doc>Verifies that the system displays an appropriate error message when the user enters an unsupported year (below minimum allowed).</doc>
+<tag>english</tag>
+<tag>negative</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<tag>validation</tag>
+<status status="PASS" starttime="20251008 09:58:06.064" endtime="20251008 09:58:06.071"/>
+</test>
+<test id="s1-t8" name="Handle Empty Year Input" line="69">
+<kw name="Given User opens the application">
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.099" endtime="20251008 09:58:06.099"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://flask_app:5000</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.099" endtime="20251008 09:58:06.099"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.099" endtime="20251008 09:58:06.100"/>
+</kw>
+<kw name="When User submits form with empty year">
+<doc>Attempts to submit the form without entering a year</doc>
+<kw name="Clear Text" library="Browser">
+<arg>input[name="year"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears the text field found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.101" endtime="20251008 09:58:06.101"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>en</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.101" endtime="20251008 09:58:06.101"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.101" endtime="20251008 09:58:06.101"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.100" endtime="20251008 09:58:06.101"/>
+</kw>
+<kw name="Then User should see HTML5 validation message">
+<doc>Verifies that HTML5 form validation prevents submission with empty required field</doc>
+<kw name="Get Attribute" library="Browser">
+<var>${required_attr}</var>
+<arg>input[name="year"]</arg>
+<arg>required</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.102" endtime="20251008 09:58:06.102"/>
+</kw>
+<kw name="Should Not Be Equal" library="BuiltIn">
+<arg>${required_attr}</arg>
+<arg>${None}</arg>
+<arg>msg=Year input should have required attribute</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.102" endtime="20251008 09:58:06.102"/>
+</kw>
+<kw name="Evaluate JavaScript" library="Browser">
+<var>${validity}</var>
+<arg>None</arg>
+<arg>document.querySelector('input[name="year"]').validity.valid</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.102" endtime="20251008 09:58:06.102"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${validity}</arg>
+<arg>${False}</arg>
+<arg>msg=Year field should be invalid when empty</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.102" endtime="20251008 09:58:06.103"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.101" endtime="20251008 09:58:06.103"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<doc>Closes the current browser instance</doc>
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.103" endtime="20251008 09:58:06.104"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.103" endtime="20251008 09:58:06.104"/>
+</kw>
+<doc>Verifies that the system handles empty year input appropriately through HTML5 validation.</doc>
+<tag>english</tag>
+<tag>negative</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<tag>validation</tag>
+<status status="PASS" starttime="20251008 09:58:06.095" endtime="20251008 09:58:06.104"/>
+</test>
+<test id="s1-t9" name="Handle Invalid Year Format" line="77">
+<kw name="Given User opens the application">
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.138" endtime="20251008 09:58:06.138"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://flask_app:5000</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.139" endtime="20251008 09:58:06.139"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.138" endtime="20251008 09:58:06.139"/>
+</kw>
+<kw name="When User enters year and language">
+<arg>abc</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<kw name="Fill Text" library="Browser">
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.139" endtime="20251008 09:58:06.140"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.140" endtime="20251008 09:58:06.140"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.140" endtime="20251008 09:58:06.140"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.139" endtime="20251008 09:58:06.140"/>
+</kw>
+<kw name="Then User should see error message containing">
+<arg>Please enter a valid integer year</arg>
+<doc>Verifies that a specific error message is displayed</doc>
+<kw name="Get Text" library="Browser">
+<var>${error_text}</var>
+<arg>css=.error</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.141" endtime="20251008 09:58:06.141"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${error_text}</arg>
+<arg>${expected_message}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.141" endtime="20251008 09:58:06.141"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.140" endtime="20251008 09:58:06.141"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<doc>Closes the current browser instance</doc>
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.141" endtime="20251008 09:58:06.141"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.141" endtime="20251008 09:58:06.141"/>
+</kw>
+<doc>Verifies that the system displays an appropriate error message when the user enters non-numeric year input.</doc>
+<tag>english</tag>
+<tag>negative</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<tag>validation</tag>
+<status status="PASS" starttime="20251008 09:58:06.136" endtime="20251008 09:58:06.141"/>
+</test>
+<test id="s1-t10" name="Year Above Maximum Range" line="85">
+<kw name="Given User opens the application">
+<doc>Opens a new browser instance and navigates to the holiday application</doc>
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.170" endtime="20251008 09:58:06.170"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://flask_app:5000</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.172" endtime="20251008 09:58:06.172"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.170" endtime="20251008 09:58:06.172"/>
+</kw>
+<kw name="When User enters year and language">
+<arg>2500</arg>
+<arg>en</arg>
+<doc>Enters year and selects language, then submits the form</doc>
+<kw name="Fill Text" library="Browser">
+<arg>input[name="year"]</arg>
+<arg>${year}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.172" endtime="20251008 09:58:06.172"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>select[name="lang"]</arg>
+<arg>value</arg>
+<arg>${lang}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.172" endtime="20251008 09:58:06.172"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.172" endtime="20251008 09:58:06.172"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.172" endtime="20251008 09:58:06.172"/>
+</kw>
+<kw name="Then User should see error message containing">
+<arg>Please enter a valid year between 1900 and 2100</arg>
+<doc>Verifies that a specific error message is displayed</doc>
+<kw name="Get Text" library="Browser">
+<var>${error_text}</var>
+<arg>css=.error</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.173" endtime="20251008 09:58:06.173"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${error_text}</arg>
+<arg>${expected_message}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.173" endtime="20251008 09:58:06.173"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.173" endtime="20251008 09:58:06.173"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<doc>Closes the current browser instance</doc>
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.174" endtime="20251008 09:58:06.174"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:06.173" endtime="20251008 09:58:06.174"/>
+</kw>
+<doc>Verifies that the system displays an appropriate error message when the user enters a year above the maximum supported range.</doc>
+<tag>english</tag>
+<tag>negative</tag>
+<tag>regression</tag>
+<tag>ui</tag>
+<tag>validation</tag>
+<status status="PASS" starttime="20251008 09:58:06.168" endtime="20251008 09:58:06.174"/>
+</test>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20251008 09:58:06.198" endtime="20251008 09:58:06.198"/>
+</kw>
+<status status="PASS" starttime="20251008 09:58:05.165" endtime="20251008 09:58:06.198"/>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">boundary</stat>
+<stat pass="9" fail="0" skip="0">english</stat>
+<stat pass="1" fail="0" skip="0">finnish</stat>
+<stat pass="1" fail="0" skip="0">future</stat>
+<stat pass="1" fail="0" skip="0">historical</stat>
+<stat pass="6" fail="0" skip="0">holidays</stat>
+<stat pass="4" fail="0" skip="0">negative</stat>
+<stat pass="8" fail="0" skip="0">regression</stat>
+<stat pass="2" fail="0" skip="0">smoke</stat>
+<stat pass="10" fail="0" skip="0">ui</stat>
+<stat pass="4" fail="0" skip="0">validation</stat>
+</tag>
+<suite>
+<stat pass="10" fail="0" skip="0" id="s1" name="Holidays Acceptance">Holidays Acceptance</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,37 @@
+{
+  "name": "default",
+  "description": "Default agent configuration",
+  "prompt": "",
+  "mcpServers": {
+    "RobotFramework": {
+      "command": "/usr/bin/docker",
+      "disabled": false,
+      "timeout": 60000,
+      "args": [
+        "exec",
+        "-i",
+        "RobotFramework-mcp-persistent",
+        "python",
+        "/app/server.py"
+      ]
+    }
+  },
+  "tools": [
+    "@RobotFramework"
+  ],
+  "toolAliases": {},
+  "allowedTools": [
+    "@RobotFramework/list_tests",
+    "@RobotFramework/run_suite",
+    "@RobotFramework/run_test_by_name"
+  ],
+  "toolsSettings": {},
+  "resources": [
+    "file://README.md"
+  ],
+  "hooks": {
+    "agentSpawn": [],
+    "userPromptSubmit": []
+  },
+  "useLegacyMcpJson": true
+}

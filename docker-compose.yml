@@ -1,10 +1,16 @@
 version: '3.8'
+
 services:
+  # Flask Application
   app:
     build: .
     ports:
       - "5000:5000"
     container_name: flask_app
+    networks:
+      - app-network
+
+  # Legacy Robot Framework test runner (one-time execution)
   robot:
     build:
       context: ./acceptance_tests
@@ -13,3 +19,33 @@ services:
     environment:
       - ROBOT_OPTIONS=--variable URL:http://app:5000
     container_name: robot_tests
+    networks:
+      - app-network
+
+  # NEW: RobotFramework MCP Server (persistent container)
+  robotframework-mcp:
+    build:
+      context: ./RobotFramework-MCP-server
+    container_name: ${CONTAINER_NAME:-RobotFramework-mcp-persistent}
+    depends_on:
+      - app
+    networks:
+      - app-network
+    volumes:
+      - ./acceptance_tests:/tests:ro
+      - ./robot_results:/results:rw
+    environment:
+      - BROWSER=${BROWSER:-chromium}
+      - HEADLESS=${HEADLESS:-true}
+      - BASE_URL=${BASE_URL:-http://app:5000}
+      - ROBOT_OUTPUT_DIR=/tmp/results
+      - RF_TESTS_DIR=/tests
+    env_file:
+      - ./RobotFramework-MCP-server/.env
+    command: tail -f /dev/null
+    stdin_open: true
+    tty: true
+
+networks:
+  app-network:
+    driver: bridge
